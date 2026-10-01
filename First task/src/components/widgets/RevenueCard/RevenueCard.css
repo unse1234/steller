@@ -1,0 +1,35 @@
+.revenue-card {
+  padding: var(--space-6) var(--space-6) 26px 26px;
+}
+
+.revenue-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.revenue-card__amount {
+  font-size: 1.8125rem; /* 29px */
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.revenue-card__menu {
+  flex: none;
+  inline-size: 3px;
+  block-size: 10px;
+}
+
+.revenue-card__caption {
+  margin-block-start: 13px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.revenue-card__progress {
+  display: grid;
+  row-gap: var(--space-3);
+  margin-block-start: 31px;
+}

@@ -1,0 +1,36 @@
+import { assets } from '../../../assets/index.js'
+import { featureSpotlight } from '../../../data/featureSpotlight.js'
+import { accountLinks } from '../../../data/navigation.js'
+import SplitSection from '../../layout/SplitSection/SplitSection.jsx'
+import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
+import Button from '../../ui/Button/Button.jsx'
+import CheckList from '../../ui/CheckList/CheckList.jsx'
+import SectionHeading from '../../ui/SectionHeading/SectionHeading.jsx'
+import FeatureSpotlightVisual from './FeatureSpotlightVisual.jsx'
+import './FeatureSpotlight.css'
+
+const TITLE_ID = 'feature-spotlight-title'
+
+const FeatureSpotlight = () => (
+  <SplitSection
+    labelledBy={TITLE_ID}
+    content={
+      <>
+        <SectionHeading
+          eyebrow="Meet Stellar"
+          title="Provide powerful solutions at all times"
+          titleId={TITLE_ID}
+          description="Stellar is more than just a SaaS and technology template—it's a complete digital transformation solution."
+        />
+        <CheckList className="feature-spotlight__features" items={featureSpotlight.features} />
+        <Button className="feature-spotlight__cta" href={accountLinks.signUp.href} size="lg">
+          Get Free Trial
+          <AssetSlot className="button__icon" src={assets.icons.arrowRight} name="arrow-icon" />
+        </Button>
+      </>
+    }
+    media={<FeatureSpotlightVisual />}
+  />
+)
+
+export default FeatureSpotlight

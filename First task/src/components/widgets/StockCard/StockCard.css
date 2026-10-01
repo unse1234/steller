@@ -1,0 +1,92 @@
+.stock-card {
+  padding: 26px;
+}
+
+.stock-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stock-card__title {
+  font-size: 1.0625rem; /* 17px */
+}
+
+.stock-card__periods {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.stock-card__period {
+  display: grid;
+  place-items: center;
+  block-size: 20px;
+  padding-inline: var(--space-2);
+  font-size: var(--font-size-2xs);
+  line-height: 1;
+  color: var(--color-text-muted);
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+}
+
+.stock-card__period--active {
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+.stock-card__divider {
+  margin-block: 22px 26px;
+}
+
+.stock-card__list {
+  display: grid;
+  row-gap: 25px;
+}
+
+.stock-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.stock-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: var(--font-size-2xs);
+  color: var(--color-text-muted);
+}
+
+/* Trend caret drawn as a small triangle before the percentage. */
+.stock-card__change {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stock-card__change::before {
+  content: '';
+  border-inline: 3px solid transparent;
+  border-block-end: 3px solid currentColor;
+}
+
+.stock-card__change--up {
+  color: var(--color-text-accent);
+}
+
+.stock-card__change--down::before {
+  rotate: 180deg;
+}
+
+.stock-card__price {
+  margin-block-start: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.stock-card__chart {
+  flex: none;
+  inline-size: 170px;
+  block-size: 44px;
+}
