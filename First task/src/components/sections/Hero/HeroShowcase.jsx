@@ -8,7 +8,7 @@ import ProfileCard from '../../widgets/ProfileCard/ProfileCard.jsx'
 import StatCard from '../../widgets/StatCard/StatCard.jsx'
 import './HeroShowcase.css'
 
-const { description, stat, profile, meeting, highlights } = heroShowcase
+const { visualLabel, stat, profile, meeting, highlights } = heroShowcase
 
 /**
  * Product preview: a phone flanked by two stacks of dashboard widgets.
@@ -16,7 +16,7 @@ const { description, stat, profile, meeting, highlights } = heroShowcase
  * of the sample data inside the widgets.
  */
 const HeroShowcase = ({ className }) => (
-  <div className={classNames('hero-showcase', className)} role="img" aria-label={description}>
+  <div className={classNames('hero-showcase', className)} role="img" aria-label={visualLabel}>
     <div className="hero-showcase__stack hero-showcase__stack--start">
       <StatCard className="hero-showcase__card" {...stat} />
       <ProfileCard className="hero-showcase__card hero-showcase__card--detail" {...profile} />

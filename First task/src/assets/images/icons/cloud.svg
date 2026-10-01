@@ -1,0 +1,10 @@
+<svg width="40" height="40" viewBox="464.231 375.834 25.407 25.407" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<path id="glyph" d="M476.934 380.28C475.363 380.28 473.857 380.904 472.747 382.014C471.636 383.125 471.012 384.631 471.012 386.202V386.213C469.661 386.305 468.398 386.918 467.49 387.924C466.582 388.929 466.1 390.247 466.145 391.601C466.19 392.954 466.759 394.238 467.732 395.18C468.705 396.122 470.006 396.65 471.361 396.651H482.507C483.862 396.65 485.163 396.122 486.136 395.18C487.109 394.238 487.678 392.954 487.723 391.601C487.768 390.247 487.286 388.929 486.378 387.924C485.47 386.918 484.207 386.305 482.856 386.213V386.202C482.856 384.631 482.232 383.125 481.121 382.014C480.011 380.904 478.505 380.28 476.934 380.28Z"/>
+<linearGradient id="fill-shine" x1="476.934" y1="380.28" x2="476.934" y2="392.773" gradientUnits="userSpaceOnUse"><stop stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+<linearGradient id="stroke-shine" x1="476.934" y1="370.91" x2="476.934" y2="397.457" gradientUnits="userSpaceOnUse"><stop stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+</defs>
+<use href="#glyph" fill="#6E51E0"/>
+<use href="#glyph" fill="url(#fill-shine)" fill-opacity="0.48"/>
+<use href="#glyph" stroke="url(#stroke-shine)" stroke-opacity="0.4" stroke-width="1.27037" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -5,8 +5,8 @@ import Card from '../../ui/Card/Card.jsx'
 import './MetricsCard.css'
 
 const TREND_ICONS = {
-  up: { src: assets.icons.trendUp, label: 'Trending up' },
-  down: { src: assets.icons.trendDown, label: 'Trending down' },
+  up: { src: assets.icons.arrowUpRight, label: 'Trending up' },
+  down: { src: assets.icons.arrowDownLeft, label: 'Trending down' },
 }
 
 const MetricsCard = ({ title, metrics, className }) => (

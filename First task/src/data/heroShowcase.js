@@ -1,10 +1,13 @@
 import { assets } from '../assets/index.js'
+import { attendees, sarahSmith } from './people.js'
+
+const { icons } = assets
 
 export const heroShowcase = {
-  description:
+  visualLabel:
     'Preview of the Stellar app: 12K customers, a personal greeting for Sarah Smith, an upcoming sales meeting and key performance highlights.',
   stat: {
-    icon: assets.icons.customers,
+    icon: icons.siren,
     value: '12K',
     label: 'Customers',
   },
@@ -12,24 +15,19 @@ export const heroShowcase = {
     greeting: 'Hi Sarah Smith,',
     prompt: 'What would you like to explore today?',
     person: {
-      name: 'Sarah Smith',
-      avatar: assets.avatars.sarahSmith,
+      ...sarahSmith,
       date: 'July 27, 2023',
       dateTime: '2023-07-27',
     },
     location: {
-      icon: assets.icons.location,
+      icon: icons.mapPin,
       label: 'Sydney, Australia, 2000',
     },
   },
   meeting: {
     title: 'Sales Meeting',
     time: '11:00 - 01:30',
-    attendees: [
-      { name: 'Attendee one', avatar: assets.avatars.attendeeOne },
-      { name: 'Attendee two', avatar: assets.avatars.attendeeTwo },
-      { name: 'Attendee three', avatar: assets.avatars.attendeeThree },
-    ],
+    attendees,
     additionalAttendees: 8,
   },
   highlights: {
@@ -37,8 +35,8 @@ export const heroShowcase = {
     metrics: [
       { label: 'Avg. Client Rating', value: '8.8', suffix: '/10', trend: 'up' },
       { label: 'Avg. Quotes', value: '748', trend: 'down' },
-      { label: 'Avg. Agent Earnings', value: '$4.500', trend: 'up' },
-      { label: 'Avg. Client Stellar', value: '%92', trend: 'up' },
+      { label: 'Avg. Agent Earnings', value: '$4,500', trend: 'up' },
+      { label: 'Avg. Client Stellar', value: '92%', trend: 'up' },
     ],
   },
 }

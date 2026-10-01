@@ -1,0 +1,10 @@
+<svg width="40" height="40" viewBox="545.535 375.834 25.407 25.407" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<path id="glyph" d="M559.985 390.284L565.225 382.424V380.677H551.251V382.424L556.491 390.284V395.524L559.985 397.271V390.284Z"/>
+<linearGradient id="fill-shine" x1="558.238" y1="380.677" x2="558.238" y2="397.271" gradientUnits="userSpaceOnUse"><stop stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+<linearGradient id="stroke-shine" x1="558.238" y1="371.18" x2="558.238" y2="398.088" gradientUnits="userSpaceOnUse"><stop stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+</defs>
+<use href="#glyph" fill="#6E51E0"/>
+<use href="#glyph" fill="url(#fill-shine)" fill-opacity="0.24"/>
+<use href="#glyph" stroke="url(#stroke-shine)" stroke-opacity="0.4" stroke-width="1.27037"/>
+</svg>

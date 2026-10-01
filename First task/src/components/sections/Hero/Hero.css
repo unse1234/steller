@@ -12,7 +12,7 @@
   inset: 0 0 auto;
   z-index: -1;
   block-size: 76%;
-  background: var(--color-background-muted) url('../../../assets/images/backgrounds/Background.png')
+  background: var(--color-background-muted) url('../../../assets/images/backgrounds/perspective-grid.png')
     center / cover no-repeat;
 }
 
