@@ -1,16 +1,44 @@
-# React + Vite
+# Stellar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page for Stellar, built from the Stellar Framer template with React 19,
+Vite and plain CSS.
 
-Currently, two official plugins are available:
+## Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```sh
+npm install
+npm run dev      # local dev server
+npm run lint     # ESLint
+npm run build    # production build in dist/
+npm run preview  # serve the production build
+```
 
-## React Compiler
+## Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+src/
+  assets/        images plus index.js, the asset manifest
+  components/
+    layout/      page chrome and layout primitives (Navbar, SiteLayout, SplitSection)
+    sections/    one folder per page section
+    ui/          small reusable building blocks (Button, Card, SectionHeading, …)
+    widgets/     product UI cards used inside section visuals
+  data/          section content and sample data
+  pages/         page compositions
+  styles/        design tokens, base styles and utilities
+  utils/         helpers
+```
 
-## Expanding the ESLint configuration
+## Conventions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Components:** one folder per component with `Name.jsx` (default export) and `Name.css`.
+- **CSS:** BEM class names, logical properties, and design tokens from
+  `styles/variables.css` for colours, type, spacing and elevation.
+- **Assets:** files are kebab-case and named after what they depict, and every
+  file is registered in `assets/index.js`. Data files decide what each asset
+  is used for.
+- **Content:** section copy and sample data live in `src/data`. Illustrative
+  visuals are exposed to assistive technology as one image with a
+  `visualLabel` summary.
+- **Missing artwork:** `AssetSlot` renders a same-sized placeholder until the
+  file is supplied.
