@@ -1,0 +1,90 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+  padding-block-start: 150px;
+}
+
+/* Muted perspective-grid band behind the top of the hero; it ends partway
+   down the device. */
+.hero__backdrop {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: -1;
+  block-size: 76%;
+  background: var(--color-background-muted) url('../../../assets/images/backgrounds/Background.png')
+    center / cover no-repeat;
+}
+
+.hero__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__eyebrow {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-accent);
+}
+
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-start: var(--space-4);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-tight);
+}
+
+.hero__title-primary {
+  font-size: var(--font-size-display-lg);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tighter);
+}
+
+.hero__title-secondary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.23em;
+  font-size: var(--font-size-display-md);
+}
+
+/* Sized in em so the pill scales with the fluid heading (88px at 56px). */
+.hero__title-highlight {
+  display: inline-flex;
+  align-items: center;
+  block-size: 1.5714em;
+  padding-inline: 0.37em;
+  color: var(--color-text-inverse);
+  letter-spacing: var(--letter-spacing-snug);
+  background-image: var(--gradient-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-accent);
+}
+
+.hero__description {
+  max-inline-size: 27.5rem;
+  margin-block-start: 14px;
+  line-height: var(--line-height-relaxed);
+  letter-spacing: var(--letter-spacing-snug);
+  color: var(--color-text-secondary);
+}
+
+.hero__showcase {
+  margin-block-start: var(--space-12);
+}
+
+@media (min-width: 1120px) {
+  .hero {
+    padding-block-start: 208px;
+  }
+
+  .hero__showcase {
+    margin-block-start: 55px;
+  }
+}

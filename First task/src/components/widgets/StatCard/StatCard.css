@@ -1,0 +1,30 @@
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  inline-size: 176px;
+  aspect-ratio: 1;
+  padding: var(--space-6);
+}
+
+/* 48px tile with the 28px glyph centred, as in the design. */
+.stat-card__icon {
+  inline-size: 48px;
+  block-size: 48px;
+  padding: 9px 10px;
+  object-fit: contain;
+}
+
+.stat-card__value {
+  margin-block-start: var(--space-3);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.stat-card__label {
+  margin-block-start: 6px;
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,60 @@
+.profile-card {
+  inline-size: 280px;
+  padding: var(--space-7) var(--space-7) var(--space-5);
+}
+
+.profile-card__greeting {
+  font-size: var(--font-size-lg);
+}
+
+.profile-card__prompt {
+  margin-block-start: 10px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.profile-card__person {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-block-start: var(--space-6);
+}
+
+.profile-card__avatar {
+  --avatar-size: 48px;
+}
+
+.profile-card__identity {
+  display: grid;
+  row-gap: 2px;
+}
+
+.profile-card__name {
+  font-size: var(--font-size-md);
+}
+
+.profile-card__date {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.profile-card__divider {
+  margin-block: var(--space-6);
+}
+
+.profile-card__location {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+/* 24px tile with the 14px pin centred, as in the design. */
+.profile-card__location-icon {
+  inline-size: 24px;
+  block-size: 24px;
+  padding: 3px 5px;
+  object-fit: contain;
+}

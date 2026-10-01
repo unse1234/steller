@@ -1,0 +1,23 @@
+.event-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  inline-size: 176px;
+  aspect-ratio: 1;
+  padding: var(--space-6) var(--space-6) 21px;
+}
+
+.event-card__title {
+  font-size: var(--font-size-lg);
+}
+
+.event-card__time {
+  margin-block-start: var(--space-1);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+
+.event-card__attendees {
+  margin-block-start: auto;
+}

@@ -1,0 +1,13 @@
+/* Temporary stand-in for artwork that has not been supplied yet. */
+.asset-slot {
+  display: block;
+  flex: none;
+  background-color: var(--color-placeholder);
+  outline: 1px dashed var(--color-placeholder-outline);
+  outline-offset: -1px;
+  border-radius: 4px;
+}
+
+.asset-slot--circle {
+  border-radius: 50%;
+}

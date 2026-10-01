@@ -1,0 +1,131 @@
+/*
+ * Design tokens
+ *
+ * Values are taken from the 1440px desktop design. Fluid tokens interpolate
+ * between a 375px mobile viewport and the 1440px desktop viewport.
+ *
+ * Breakpoints (media queries cannot read custom properties):
+ *   640px  – tablet layout and up
+ *   1120px – desktop layout (inline navigation, three-column hero showcase)
+ */
+
+:root {
+  /* Typography ------------------------------------------------------------ */
+  --font-family-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.8125rem; /* 13px */
+  --font-size-md: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.625rem; /* 26px */
+  --font-size-2xl: 2rem; /* 32px */
+  --font-size-display-md: clamp(2rem, 1.472rem + 2.254vw, 3.5rem); /* 32px → 56px */
+  --font-size-display-lg: clamp(2.25rem, 1.678rem + 2.441vw, 3.875rem); /* 36px → 62px */
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 2;
+
+  --letter-spacing-snug: -0.01em;
+  --letter-spacing-tight: -0.04em;
+  --letter-spacing-tighter: -0.063em;
+
+  /* Color palette --------------------------------------------------------- */
+  --color-white: #ffffff;
+  --color-gray-50: #f7f8fa;
+  --color-gray-100: #eef0f4;
+  --color-gray-200: #e4e6ee;
+  --color-gray-400: #9ea5b8;
+  --color-gray-500: #5b6170;
+  --color-gray-700: #363d4f;
+  --color-gray-950: #060b13;
+  --color-violet-100: #ece9fb;
+  --color-violet-300: #c7bcf3;
+  --color-violet-400: #9c88e9;
+  --color-violet-500: #775be2;
+  --color-violet-600: #6f52e0;
+
+  /* Semantic colors ------------------------------------------------------- */
+  --color-text-primary: var(--color-gray-950);
+  --color-text-secondary: var(--color-gray-700);
+  --color-text-muted: var(--color-gray-500);
+  --color-text-subtle: var(--color-gray-400);
+  --color-text-inverse: var(--color-white);
+  --color-text-accent: var(--color-violet-500);
+
+  --color-background: var(--color-white);
+  --color-background-muted: var(--color-gray-50);
+  --color-surface: var(--color-white);
+  --color-border-subtle: var(--color-gray-100);
+  --color-border: var(--color-gray-200);
+  --color-accent: var(--color-violet-500);
+  --color-focus-ring: var(--color-violet-500);
+
+  --gradient-accent: linear-gradient(
+    180deg,
+    var(--color-violet-400) 0%,
+    var(--color-violet-600) 100%
+  );
+
+  /* Temporary asset placeholders (see components/ui/AssetSlot) */
+  --color-placeholder: var(--color-violet-100);
+  --color-placeholder-outline: var(--color-violet-300);
+
+  /* Spacing --------------------------------------------------------------- */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.5rem; /* 24px */
+  --space-7: 1.75rem; /* 28px */
+  --space-8: 2rem; /* 32px */
+  --space-10: 2.5rem; /* 40px */
+  --space-12: 3rem; /* 48px */
+
+  /* Radii ----------------------------------------------------------------- */
+  --radius-sm: 8px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+
+  /* Elevation ------------------------------------------------------------- */
+  /* Floating surfaces sit inside a solid white ring drawn outside the border. */
+  --ring-width-sm: 4px;
+  --ring-width-md: 6px;
+  --shadow-ring-edge: 0 1px 3px rgba(16, 24, 40, 0.08);
+  --shadow-floating: 0 12px 96px rgba(16, 24, 40, 0.11);
+  --shadow-accent: 0 2px 6px rgba(111, 82, 224, 0.18);
+
+  /* Layout ---------------------------------------------------------------- */
+  --container-max-width: 85rem; /* 1360px */
+  --page-gutter: var(--space-10);
+  --section-padding-block: 92px;
+
+  /* Motion ---------------------------------------------------------------- */
+  --duration-fast: 150ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Layers ---------------------------------------------------------------- */
+  --z-index-header: 100;
+}
+
+@media (max-width: 1119.98px) {
+  :root {
+    --page-gutter: var(--space-6);
+    --section-padding-block: 72px;
+  }
+}
+
+@media (max-width: 639.98px) {
+  :root {
+    --page-gutter: var(--space-4);
+    --section-padding-block: 56px;
+  }
+}

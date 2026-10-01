@@ -1,0 +1,189 @@
+/*
+ * Floating, fixed navigation bar.
+ * Below the desktop breakpoint the links and account actions collapse into a
+ * dropdown panel; on desktop the same markup is laid out inline.
+ */
+.navbar {
+  --navbar-offset: 20px;
+  --navbar-ring: var(--ring-width-md);
+
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: var(--z-index-header);
+  padding-block-start: var(--navbar-offset);
+  pointer-events: none;
+}
+
+.navbar__bar {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  min-block-size: 70px;
+  margin: var(--navbar-ring);
+  padding: var(--space-3) var(--space-3) var(--space-3) var(--space-5);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-pill);
+  box-shadow:
+    0 0 0 var(--navbar-ring) var(--color-surface),
+    var(--shadow-ring-edge);
+  pointer-events: auto;
+}
+
+.navbar__bar > .logo {
+  justify-self: start;
+}
+
+.navbar__link {
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.navbar__link:hover {
+  color: var(--color-text-accent);
+}
+
+/* Menu toggle (collapsed layouts only) ------------------------------------ */
+.navbar__toggle {
+  display: inline-grid;
+  place-items: center;
+  justify-self: end;
+  inline-size: 44px;
+  block-size: 44px;
+  padding: 0;
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.navbar__toggle:hover {
+  background-color: var(--color-background-muted);
+}
+
+.navbar__toggle-icon {
+  position: relative;
+  inline-size: 16px;
+  block-size: 10px;
+}
+
+.navbar__toggle-icon::before,
+.navbar__toggle-icon::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  block-size: 1.5px;
+  background-color: currentColor;
+  border-radius: 1px;
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.navbar__toggle-icon::before {
+  inset-block-start: 0;
+}
+
+.navbar__toggle-icon::after {
+  inset-block-end: 0;
+}
+
+.navbar__toggle[aria-expanded='true'] .navbar__toggle-icon::before {
+  transform: translateY(4.25px) rotate(45deg);
+}
+
+.navbar__toggle[aria-expanded='true'] .navbar__toggle-icon::after {
+  transform: translateY(-4.25px) rotate(-45deg);
+}
+
+/* Collapsed menu panel ------------------------------------------------------ */
+@media (max-width: 1119.98px) {
+  .navbar__menu {
+    position: absolute;
+    inset-block-start: calc(100% + var(--navbar-ring) + var(--space-3));
+    inset-inline: 0;
+    display: none;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-3);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow:
+      0 0 0 var(--navbar-ring) var(--color-surface),
+      var(--shadow-floating);
+  }
+
+  .navbar__menu[data-open='true'] {
+    display: flex;
+  }
+
+  .navbar__links .navbar__link,
+  .navbar__actions > .navbar__link {
+    display: block;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-size-base);
+    border-radius: var(--radius-sm);
+  }
+
+  .navbar__links .navbar__link:hover,
+  .navbar__actions > .navbar__link:hover {
+    background-color: var(--color-background-muted);
+  }
+
+  .navbar__actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding-block-start: var(--space-4);
+    border-block-start: 1px solid var(--color-border-subtle);
+  }
+
+  .navbar__cta {
+    inline-size: 100%;
+  }
+}
+
+/* Desktop: inline layout ----------------------------------------------------- */
+@media (min-width: 1120px) {
+  .navbar {
+    --navbar-offset: 26px;
+  }
+
+  .navbar__bar {
+    grid-template-columns: 1fr auto 1fr;
+    min-block-size: 88px;
+    padding-block: 0;
+    /* Bar radius − button radius: the CTA nests concentrically in the bar's
+       rounded end. Symmetric so the centre column sits on the bar's centre. */
+    padding-inline: 23px;
+  }
+
+  /* Optical inset: the flat-sided logo needs more room than the round CTA. */
+  .navbar__bar > .logo {
+    margin-inline-start: 4px;
+  }
+
+  .navbar__toggle {
+    display: none;
+  }
+
+  .navbar__menu {
+    display: contents;
+  }
+
+  .navbar__links {
+    display: flex;
+    gap: clamp(var(--space-6), 3.33vw, var(--space-12));
+  }
+
+  .navbar__actions {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    gap: var(--space-8);
+  }
+}

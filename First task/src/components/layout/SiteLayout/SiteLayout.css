@@ -1,0 +1,22 @@
+.skip-link {
+  position: fixed;
+  inset-block-start: var(--space-3);
+  inset-inline-start: var(--space-3);
+  z-index: calc(var(--z-index-header) + 1);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-floating);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+}
+
+.site-main:focus {
+  outline: none;
+}

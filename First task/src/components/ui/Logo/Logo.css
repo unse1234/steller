@@ -1,0 +1,16 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.logo__mark {
+  inline-size: 1em;
+  aspect-ratio: 19 / 14;
+}
