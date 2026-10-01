@@ -42,3 +42,16 @@
     margin-block-start: var(--space-8);
   }
 }
+
+@media (min-width: 1120px) {
+  .trusted-by {
+    padding-block-start: 169px;
+  }
+}
+
+/* Wide screens: the design's 1216px measure (see --scale-narrow-to-medium). */
+@media (min-width: 1300px) {
+  .trusted-by__inner {
+    zoom: var(--scale-narrow-to-medium);
+  }
+}

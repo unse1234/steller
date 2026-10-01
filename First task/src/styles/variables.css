@@ -129,6 +129,9 @@
   --container-medium-max-width: 76rem; /* 1216px */
   --container-narrow-max-width: 72rem; /* 1152px */
   --container-compact-max-width: 67rem; /* 1072px */
+  /* Trusted By, Meet Stellar and Get Started are sized in units of the narrow
+     container; on wide screens the design sets them on the medium one. */
+  --scale-narrow-to-medium: calc(1216 / 1152);
   --page-gutter: var(--space-10);
   --section-padding-block: 92px;
   --section-padding-block-lg: 120px; /* sections on a tinted band */

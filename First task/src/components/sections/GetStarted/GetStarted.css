@@ -2,6 +2,19 @@
   --split-content-width: 30.25rem; /* 484px */
 }
 
+@media (min-width: 1120px) {
+  .get-started {
+    padding-block: 78px 165px;
+  }
+}
+
+/* Side by side, the cards sit slightly below the copy's centre line. */
+@media (min-width: 1300px) {
+  .get-started-visual {
+    inset-block-start: 6px;
+  }
+}
+
 /* Keeps the design's break after "Stellar". */
 .get-started__heading .section-heading__title {
   max-inline-size: 10em;

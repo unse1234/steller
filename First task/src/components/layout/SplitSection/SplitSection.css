@@ -38,3 +38,10 @@
     grid-column: 1;
   }
 }
+
+/* Wide screens: the design's 1216px measure (see --scale-narrow-to-medium). */
+@media (min-width: 1300px) {
+  .split-section__inner {
+    zoom: var(--scale-narrow-to-medium);
+  }
+}
