@@ -19,21 +19,30 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
+  --font-size-2xs: 0.6875rem; /* 11px */
   --font-size-xs: 0.75rem; /* 12px */
   --font-size-sm: 0.8125rem; /* 13px */
   --font-size-md: 0.875rem; /* 14px */
+  --font-size-md-plus: 0.9375rem; /* 15px */
   --font-size-base: 1rem; /* 16px */
   --font-size-lg: 1.125rem; /* 18px */
   --font-size-xl: 1.625rem; /* 26px */
   --font-size-2xl: 2rem; /* 32px */
+  --font-size-display-sm: clamp(1.875rem, 1.545rem + 1.408vw, 2.8125rem); /* 30px → 45px */
   --font-size-display-md: clamp(2rem, 1.472rem + 2.254vw, 3.5rem); /* 32px → 56px */
   --font-size-display-lg: clamp(2.25rem, 1.678rem + 2.441vw, 3.875rem); /* 36px → 62px */
+  --font-size-display-xl: clamp(2.25rem, 1.766rem + 2.066vw, 3.625rem); /* 36px → 58px */
+
+  /* Inter Display: the font's large optical size, used for headline type. */
+  --font-variation-display: 'opsz' 32;
 
   --line-height-tight: 1.2;
   --line-height-normal: 1.5;
+  --line-height-comfortable: 1.67;
   --line-height-relaxed: 2;
 
   --letter-spacing-snug: -0.01em;
+  --letter-spacing-snugger: -0.02em;
   --letter-spacing-tight: -0.04em;
   --letter-spacing-tighter: -0.063em;
 
@@ -42,6 +51,7 @@
   --color-gray-50: #f7f8fa;
   --color-gray-100: #eef0f4;
   --color-gray-200: #e4e6ee;
+  --color-gray-300: #ced2df;
   --color-gray-400: #9ea5b8;
   --color-gray-500: #5b6170;
   --color-gray-700: #363d4f;
@@ -49,6 +59,7 @@
   --color-violet-100: #ece9fb;
   --color-violet-300: #c7bcf3;
   --color-violet-400: #9c88e9;
+  --color-violet-450: #917be7;
   --color-violet-500: #775be2;
   --color-violet-600: #6f52e0;
 
@@ -92,6 +103,7 @@
 
   /* Radii ----------------------------------------------------------------- */
   --radius-sm: 8px;
+  --radius-md: 12px;
   --radius-lg: 24px;
   --radius-pill: 9999px;
 
@@ -99,14 +111,24 @@
   /* Floating surfaces sit inside a solid white ring drawn outside the border. */
   --ring-width-sm: 4px;
   --ring-width-md: 6px;
-  --shadow-ring-edge: 0 1px 3px rgba(16, 24, 40, 0.08);
-  --shadow-floating: 0 12px 96px rgba(16, 24, 40, 0.11);
-  --shadow-accent: 0 2px 6px rgba(111, 82, 224, 0.18);
+  --shadow-ring-edge: 0 1px 3px rgb(16 24 40 / 0.08);
+  --shadow-floating: 0 12px 96px rgb(16 24 40 / 0.11);
+  --shadow-floating-soft: 0 12px 96px rgb(6 11 19 / 0.06);
+  --shadow-accent: 0 2px 6px rgb(111 82 224 / 0.18);
+  /* Raised accent pill: inner sheen, dark contact line, violet rim and glow. */
+  --shadow-accent-pill:
+    inset 0 0 0 1px color-mix(in srgb, var(--color-white) 12%, transparent),
+    0 1px 1px rgb(38 20 85 / 0.5),
+    0 0 0 1.5px var(--color-violet-600),
+    0 6px 8px -4px rgb(127 81 242 / 0.3);
 
   /* Layout ---------------------------------------------------------------- */
   --container-max-width: 85rem; /* 1360px */
+  --container-narrow-max-width: 72rem; /* 1152px */
+  --container-compact-max-width: 67rem; /* 1072px */
   --page-gutter: var(--space-10);
   --section-padding-block: 92px;
+  --section-padding-block-lg: 120px; /* sections on a tinted band */
 
   /* Motion ---------------------------------------------------------------- */
   --duration-fast: 150ms;
@@ -120,6 +142,7 @@
   :root {
     --page-gutter: var(--space-6);
     --section-padding-block: 72px;
+    --section-padding-block-lg: 96px;
   }
 }
 
@@ -127,5 +150,6 @@
   :root {
     --page-gutter: var(--space-4);
     --section-padding-block: 56px;
+    --section-padding-block-lg: 72px;
   }
 }

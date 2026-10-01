@@ -16,6 +16,9 @@ body {
   min-block-size: 100vh;
   font-family: var(--font-family-sans);
   font-size: var(--font-size-base);
+  /* Inter ships an optical-size axis; text uses its default (text) cut and
+     display type opts in explicitly via --font-variation-display. */
+  font-optical-sizing: none;
   line-height: var(--line-height-normal);
   color: var(--color-text-primary);
   background-color: var(--color-background);

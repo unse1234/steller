@@ -19,7 +19,7 @@
 /* The ticker is clipped to a narrower measure than the page container. */
 .trusted-by__logos {
   inline-size: 100%;
-  max-inline-size: 72rem; /* 1152px */
+  max-inline-size: var(--container-narrow-max-width);
   margin-block: 54px;
 }
 
