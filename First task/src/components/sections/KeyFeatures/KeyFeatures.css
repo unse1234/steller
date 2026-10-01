@@ -1,0 +1,102 @@
+.key-features {
+  overflow-x: clip;
+  padding-block: var(--section-padding-block-lg);
+}
+
+.key-features__inner {
+  display: grid;
+  row-gap: var(--space-12);
+}
+
+.key-features__list {
+  display: grid;
+  gap: 48px var(--space-8);
+  margin-block-start: 64px;
+}
+
+.key-features__icon {
+  display: grid;
+  place-items: center;
+  inline-size: 48px;
+  aspect-ratio: 1;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 50%;
+}
+
+.key-features__icon-mark {
+  inline-size: 24px;
+  block-size: 24px;
+}
+
+.key-features__title {
+  margin-block-start: var(--space-4);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: 24px;
+}
+
+.key-features__description {
+  margin-block-start: var(--space-3);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-comfortable);
+  color: var(--color-text-secondary);
+}
+
+/*
+ * A 520 x 560 composition that scales as one: two phones, the front one
+ * overlapping the back one, standing in an outlined panel that fills the
+ * lower half. Both phones are cropped flush with the panel's bottom edge.
+ */
+.key-features__visual {
+  position: relative;
+  isolation: isolate;
+  inline-size: 100%;
+  max-inline-size: 520px;
+  aspect-ratio: 520 / 560;
+  margin-inline: auto;
+}
+
+.key-features__visual::before {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  z-index: -1;
+  block-size: 50%;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 20px 20px var(--radius-sm) var(--radius-sm);
+}
+
+.key-features__phone {
+  position: absolute;
+  inset-block-end: 0;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* 272 x 540 at x 178 */
+.key-features__phone--back {
+  inset-inline-start: 34.23%;
+  inline-size: 52.31%;
+  block-size: 96.43%;
+}
+
+/* 304 x 401 at x 70 */
+.key-features__phone--front {
+  inset-inline-start: 13.46%;
+  inline-size: 58.46%;
+  block-size: 71.61%;
+}
+
+@media (min-width: 640px) {
+  .key-features__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1120px) {
+  .key-features__inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--space-8);
+  }
+}
