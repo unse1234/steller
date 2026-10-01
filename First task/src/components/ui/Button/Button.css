@@ -2,6 +2,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: var(--space-3);
   block-size: 42px;
   padding-inline: var(--space-4);
   border: 1px solid transparent;
@@ -24,6 +25,21 @@
   font-weight: var(--font-weight-medium);
 }
 
+.button--sm {
+  block-size: 34px;
+  padding-inline: var(--space-3);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Icon artwork carries ~4px of built-in padding; pull it in so spacing
+   measures to the glyph itself. */
+.button__icon {
+  inline-size: 24px;
+  block-size: 24px;
+  margin-inline: -4px;
+}
+
 .button--outline {
   color: var(--color-text-primary);
   background-color: var(--color-surface);
@@ -33,4 +49,22 @@
 .button--outline:hover {
   background-color: var(--color-background-muted);
   border-color: var(--color-violet-300);
+}
+
+.button--primary {
+  color: var(--color-text-inverse);
+  background-color: var(--color-violet-600);
+}
+
+.button--primary:hover {
+  background-color: var(--color-violet-500);
+}
+
+.button--soft {
+  color: var(--color-text-primary);
+  background-color: var(--color-background-muted);
+}
+
+.button--soft:hover {
+  background-color: var(--color-gray-100);
 }

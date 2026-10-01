@@ -1,0 +1,19 @@
+.sparkline {
+  overflow: visible;
+}
+
+.sparkline--accent {
+  color: var(--color-accent);
+}
+
+.sparkline--neutral {
+  color: var(--color-text-muted);
+}
+
+.sparkline__line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

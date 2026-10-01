@@ -1,0 +1,40 @@
+.newsletter-form {
+  display: grid;
+  row-gap: 15px;
+  max-inline-size: 340px;
+}
+
+.newsletter-form__input {
+  block-size: 48px;
+  padding-inline: var(--space-4);
+  font: inherit;
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  transition: border-color var(--duration-fast) var(--ease-standard);
+}
+
+.newsletter-form__input::placeholder {
+  color: var(--color-text-subtle);
+}
+
+.newsletter-form__input:hover {
+  border-color: var(--color-violet-300);
+}
+
+.newsletter-form__input:focus-visible {
+  border-color: var(--color-accent);
+  outline-offset: 0;
+}
+
+.newsletter-form__submit {
+  font-size: var(--font-size-md-plus);
+  font-weight: var(--font-weight-regular);
+}
+
+.newsletter-form__note {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}

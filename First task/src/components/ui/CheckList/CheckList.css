@@ -1,0 +1,19 @@
+.check-list {
+  display: grid;
+  row-gap: var(--space-4);
+}
+
+.check-list__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-block-size: 22px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.check-list__icon {
+  flex: none;
+  inline-size: 22px;
+  block-size: 22px;
+}
