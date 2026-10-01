@@ -1,14 +1,16 @@
 import HeroShowcase from './HeroShowcase.jsx'
 import './Hero.css'
 
+const TITLE_ID = 'hero-title'
+
 const Hero = () => (
-  <section className="hero" aria-labelledby="hero-title">
+  <section className="hero" aria-labelledby={TITLE_ID}>
     <div className="hero__backdrop" aria-hidden="true" />
 
     <div className="container">
       <div className="hero__intro">
         <p className="hero__eyebrow">Our Framer Template</p>
-        <h1 id="hero-title" className="hero__title">
+        <h1 id={TITLE_ID} className="hero__title">
           <span className="hero__title-primary">Save time and build</span>{' '}
           <span className="hero__title-secondary">
             better with <span className="hero__title-highlight">Stellar</span>
