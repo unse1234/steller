@@ -46,6 +46,20 @@
   color: var(--color-text-accent);
 }
 
+/* Desktop: inline links grow slightly on hover. */
+@media (min-width: 1120px) {
+  .navbar__link {
+    display: inline-block;
+    transition:
+      color var(--duration-fast) var(--ease-standard),
+      transform var(--duration-fast) var(--ease-standard);
+  }
+
+  .navbar__link:hover {
+    transform: scale(1.08);
+  }
+}
+
 /* Menu toggle (collapsed layouts only) ------------------------------------ */
 .navbar__toggle {
   display: inline-grid;

@@ -13,9 +13,24 @@
   white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
+  /* Hover fill: a solid layer that sweeps in from the left. */
+  background-image: linear-gradient(var(--button-fill), var(--button-fill));
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
   transition:
-    background-color var(--duration-fast) var(--ease-standard),
-    border-color var(--duration-fast) var(--ease-standard);
+    background-size var(--duration-medium) var(--ease-standard),
+    color var(--duration-medium) var(--ease-standard),
+    border-color var(--duration-medium) var(--ease-standard);
+}
+
+/* Only real controls react; decorative pills inside illustrations
+   (`as="span"`) stay still. On the way in, the label changes colour just
+   behind the sweep. */
+:is(a, button).button:hover,
+:is(a, button).button:focus-visible {
+  background-size: 100% 100%;
+  transition-delay: 0s, 80ms, 0s;
 }
 
 .button--lg {
@@ -38,46 +53,59 @@
   inline-size: 24px;
   block-size: 24px;
   margin-inline: -4px;
+  transition: filter var(--duration-medium) var(--ease-standard);
 }
 
+/* Outline: fills with the brand violet; label and icon turn white. */
 .button--outline {
+  --button-fill: var(--color-violet-600);
+
   color: var(--color-text-primary);
   background-color: var(--color-surface);
   border-color: var(--color-border);
 }
 
-.button--outline:hover {
-  background-color: var(--color-background-muted);
-  border-color: var(--color-violet-300);
+:is(a, button).button--outline:hover,
+:is(a, button).button--outline:focus-visible {
+  color: var(--color-text-inverse);
+  border-color: var(--color-violet-600);
 }
 
+:is(a, button).button--outline:hover .button__icon,
+:is(a, button).button--outline:focus-visible .button__icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Filled variants deepen to a darker violet. */
 .button--primary {
+  --button-fill: var(--color-violet-700);
+
   color: var(--color-text-inverse);
   background-color: var(--color-violet-600);
 }
 
-.button--primary:hover {
-  background-color: var(--color-violet-500);
-}
-
-/* Raised gradient pill, the design's emphasised call to action. */
+/* Raised gradient pill, the design's emphasised call to action. The hover
+   fill is layered over the gradient so the gradient never drops out. */
 .button--accent {
+  --button-fill: var(--color-violet-700);
+
   color: var(--color-text-inverse);
-  background-image: var(--gradient-accent);
+  background-image:
+    linear-gradient(var(--button-fill), var(--button-fill)),
+    var(--gradient-accent);
+  background-size: 0% 100%, 100% 100%;
   border-color: transparent;
   box-shadow: var(--shadow-accent-pill);
 }
 
-.button--accent:hover {
-  background-color: var(--color-violet-600);
-  background-image: none;
+:is(a, button).button--accent:hover,
+:is(a, button).button--accent:focus-visible {
+  background-size: 100% 100%, 100% 100%;
 }
 
 .button--soft {
+  --button-fill: var(--color-gray-100);
+
   color: var(--color-text-primary);
   background-color: var(--color-background-muted);
-}
-
-.button--soft:hover {
-  background-color: var(--color-gray-100);
 }

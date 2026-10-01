@@ -63,6 +63,7 @@
   --color-violet-450: #917be7;
   --color-violet-500: #775be2;
   --color-violet-600: #6f52e0;
+  --color-violet-700: #5a3dd1;
 
   /* Semantic colors ------------------------------------------------------- */
   --color-text-primary: var(--color-gray-950);
@@ -134,6 +135,7 @@
 
   /* Motion ---------------------------------------------------------------- */
   --duration-fast: 150ms;
+  --duration-medium: 350ms;
   --ease-standard: cubic-bezier(0.2, 0, 0, 1);
 
   /* Layers ---------------------------------------------------------------- */
