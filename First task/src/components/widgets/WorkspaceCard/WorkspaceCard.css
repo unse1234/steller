@@ -1,0 +1,65 @@
+.workspace-card {
+  padding: var(--space-6);
+}
+
+.workspace-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.workspace-card__name {
+  font-size: var(--font-size-xs);
+}
+
+.workspace-card__updated {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.workspace-card__logo {
+  display: grid;
+  place-items: center;
+  flex: none;
+  inline-size: 41px;
+  aspect-ratio: 1;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 50%;
+}
+
+.workspace-card__logo-mark {
+  inline-size: 16px;
+  block-size: 16px;
+}
+
+.workspace-card__progress {
+  margin-block-start: var(--space-4);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+}
+
+.workspace-card__members-label {
+  margin-block-start: var(--space-3);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.workspace-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-block-start: 10px;
+}
+
+.workspace-card__members {
+  --avatar-size: 36px;
+}
+
+.workspace-card__action {
+  block-size: 38px;
+}
