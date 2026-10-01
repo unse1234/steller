@@ -1,6 +1,6 @@
 import { classNames } from '../../../utils/classNames.js'
 import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
-import { Avatar } from '../../ui/Avatar/Avatar.jsx'
+import Avatar from '../../ui/Avatar/Avatar.jsx'
 import Card from '../../ui/Card/Card.jsx'
 import './ProfileCard.css'
 

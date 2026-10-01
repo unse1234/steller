@@ -1,5 +1,5 @@
 import { classNames } from '../../../utils/classNames.js'
-import { AvatarGroup } from '../../ui/Avatar/Avatar.jsx'
+import AvatarGroup from '../../ui/AvatarGroup/AvatarGroup.jsx'
 import Card from '../../ui/Card/Card.jsx'
 import './EventCard.css'
 
