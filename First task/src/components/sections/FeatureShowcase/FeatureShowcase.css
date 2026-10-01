@@ -1,0 +1,97 @@
+.feature-showcase {
+  position: relative;
+  isolation: isolate;
+  padding-block: var(--section-padding-block-lg);
+  background-color: var(--color-background-muted);
+}
+
+/*
+ * The hero's grid artwork has a perspective band along its top and bottom
+ * edges. Each half of the section shows one band at the artwork's own
+ * proportions, so the grid never stretches with the section's height.
+ */
+.feature-showcase::before,
+.feature-showcase::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  z-index: -1;
+  block-size: 50%;
+  background: url('../../../assets/images/backgrounds/perspective-grid.png') no-repeat;
+  background-size: 100% auto;
+}
+
+.feature-showcase::before {
+  inset-block-start: 0;
+  background-position: top center;
+}
+
+.feature-showcase::after {
+  inset-block-end: 0;
+  background-position: bottom center;
+}
+
+/* Keeps the design's break after "has". */
+.feature-showcase__heading .section-heading__title {
+  max-inline-size: 9.5em;
+}
+
+/* Sized in em so the pill scales with the fluid heading (85px at 58px). The
+   negative margin keeps it from stretching its line. */
+.feature-showcase__highlight {
+  display: inline-block;
+  margin-block: -0.036em;
+  padding-inline: 0.345em;
+  line-height: 1.462;
+  color: var(--color-text-inverse);
+  background-image: var(--gradient-accent);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-accent-pill);
+}
+
+.feature-showcase__list {
+  isolation: isolate;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 56px var(--space-8);
+  max-inline-size: var(--container-compact-max-width); /* three 336px cards */
+  margin-block-start: 66px;
+  margin-inline: auto;
+}
+
+.feature-showcase__item {
+  flex: 0 1 21rem;
+  min-inline-size: 0;
+}
+
+/* Desktop always shows one row; cards give up a few pixels near 1120px. */
+@media (min-width: 1120px) {
+  .feature-showcase__list {
+    flex-wrap: nowrap;
+  }
+}
+
+.feature-showcase__title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-block-start: var(--space-8);
+  font-size: 1.375rem; /* 22px */
+  font-weight: var(--font-weight-medium);
+  font-variation-settings: var(--font-variation-display);
+  line-height: 32px;
+}
+
+.feature-showcase__icon {
+  inline-size: 32px;
+  block-size: 32px;
+}
+
+.feature-showcase__description {
+  max-inline-size: 20rem;
+  margin-block-start: var(--space-3);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-comfortable);
+  color: var(--color-text-secondary);
+}

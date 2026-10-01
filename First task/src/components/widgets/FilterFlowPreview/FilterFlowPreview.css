@@ -1,0 +1,47 @@
+/* Lengths are in the preview's unscaled units (see PreviewCard). The row
+   bleeds through the screen's padding so the links reach the card edges. */
+.filter-flow-preview {
+  display: grid;
+  grid-template-columns: 71fr 96px 32px 96px 87fr;
+  align-items: center;
+  margin-block-start: 52px; /* from the divider (margins collapse) */
+  margin-inline: -27px;
+}
+
+.filter-flow-preview__link {
+  block-size: 1px;
+  background-color: var(--color-border-subtle);
+}
+
+.filter-flow-preview__link--active {
+  background-color: var(--color-violet-600);
+}
+
+.filter-flow-preview__node {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+/* The outline turns from violet to grey away from the active link, and the
+   fill carries a faint grey wash on the same side. */
+.filter-flow-preview__node--start {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-background-muted) 48%, transparent) 4%, transparent 50%) padding-box,
+    linear-gradient(var(--color-surface), var(--color-surface)) padding-box,
+    linear-gradient(90deg, var(--color-violet-450) 35%, var(--color-border-subtle)) border-box;
+}
+
+.filter-flow-preview__node--end {
+  background:
+    linear-gradient(270deg, color-mix(in srgb, var(--color-background-muted) 48%, transparent) 4%, transparent 50%) padding-box,
+    linear-gradient(var(--color-surface), var(--color-surface)) padding-box,
+    linear-gradient(270deg, var(--color-violet-450) 35%, var(--color-border-subtle)) border-box;
+}
+
+.filter-flow-preview__icon {
+  inline-size: 40px;
+  block-size: 40px;
+}
