@@ -1,6 +1,5 @@
 import { useId } from 'react'
 import { classNames } from '../../../utils/classNames.js'
-import './Sparkline.css'
 
 /**
  * Builds an SVG path through `points`, rounding every interior vertex with a
@@ -36,11 +35,15 @@ const roundedPath = (points, radius) => {
   return path
 }
 
+const TONES = {
+  accent: 'text-accent',
+  neutral: 'text-muted',
+}
+
 /**
  * Minimal line chart with a soft area fill. `points` are `[x, y]` pairs in a
  * `width` × `height` coordinate space (y grows downwards); colour follows
- * `currentColor`, set through the `tone` modifier. `cornerRadius` rounds the
- * peaks and dips.
+ * `currentColor`, set by `tone`. `cornerRadius` rounds the peaks and dips.
  */
 const Sparkline = ({ points, width, height, cornerRadius = 6, tone = 'accent', className }) => {
   const gradientId = useId()
@@ -49,7 +52,7 @@ const Sparkline = ({ points, width, height, cornerRadius = 6, tone = 'accent', c
 
   return (
     <svg
-      className={classNames('sparkline', `sparkline--${tone}`, className)}
+      className={classNames('overflow-visible', TONES[tone], className)}
       viewBox={`0 0 ${width} ${height}`}
       aria-hidden="true"
     >
@@ -60,7 +63,14 @@ const Sparkline = ({ points, width, height, cornerRadius = 6, tone = 'accent', c
         </linearGradient>
       </defs>
       <path d={area} fill={`url(#${gradientId})`} />
-      <path className="sparkline__line" d={line} />
+      <path
+        d={line}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.25"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   )
 }
