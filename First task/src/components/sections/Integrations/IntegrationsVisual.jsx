@@ -1,5 +1,6 @@
 import { assets } from '../../../assets/index.js'
 import { integrations } from '../../../data/integrations.js'
+import { classNames } from '../../../utils/classNames.js'
 import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
 
 const { visualLabel, map, apps } = integrations
@@ -27,15 +28,31 @@ const position = ({ x, y }) => ({
   '--y': y / map.height,
 })
 
+/* A disc on the map, centred on its position. */
+const DISC = 'absolute grid aspect-square -translate-1/2 place-items-center rounded-[50%] bg-surface'
+
+/* 140px white disc holding a 124px outlined circle. */
+const HUB = [
+  'top-1/2 left-1/2 w-[13.89%] shadow-floating-soft',
+  'after:absolute after:inset-[5.71%] after:rounded-[50%] after:border after:border-border-subtle',
+].join(' ')
+
+/* 88px node */
+const NODE = 'top-[calc(var(--y)*100%)] left-[calc(var(--x)*100%)] w-[8.73%] border border-border-subtle'
+
+/**
+ * The integration map scales as one: nodes are placed and sized as
+ * fractions of the 1008 x 395 design map, connectors stay 1px.
+ */
 const IntegrationsVisual = () => (
   <div
-    className="integrations-visual"
+    className="relative isolate mt-15.5 aspect-(--map-aspect) w-full max-w-252"
     role="img"
     aria-label={visualLabel}
     style={{ '--map-aspect': `${map.width} / ${map.height}` }}
   >
     <svg
-      className="integrations-visual__connectors"
+      className="absolute inset-0 -z-1 h-full w-full fill-none stroke-border stroke-1"
       viewBox={`0 0 ${map.width} ${map.height}`}
       preserveAspectRatio="none"
       aria-hidden="true"
@@ -45,13 +62,15 @@ const IntegrationsVisual = () => (
       ))}
     </svg>
 
-    <span className="integrations-visual__hub">
-      <AssetSlot className="integrations-visual__hub-mark" src={assets.logoMark} name="logo-mark" />
+    <span className={classNames(DISC, HUB)}>
+      {/* 48px mark */}
+      <AssetSlot className="aspect-19/14 w-[34.3%]" src={assets.logoMark} name="logo-mark" />
     </span>
 
     {apps.map((app) => (
-      <span key={app.name} className="integrations-visual__node" style={position(app)}>
-        <AssetSlot className="integrations-visual__icon" src={app.icon} name="integration-icon" />
+      <span key={app.name} className={classNames(DISC, NODE)} style={position(app)}>
+        {/* 32px glyph */}
+        <AssetSlot className="aspect-square w-[36.4%] object-contain" src={app.icon} name="integration-icon" />
       </span>
     ))}
   </div>
