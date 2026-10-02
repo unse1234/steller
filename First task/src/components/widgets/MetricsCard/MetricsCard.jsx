@@ -3,7 +3,6 @@ import { classNames } from '../../../utils/classNames.js'
 import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
 import Card from '../../ui/Card/Card.jsx'
 import CardDivider from '../../ui/Card/CardDivider.jsx'
-import './MetricsCard.css'
 
 const TREND_ICONS = {
   up: { src: assets.icons.arrowUpRight, label: 'Trending up' },
@@ -11,23 +10,23 @@ const TREND_ICONS = {
 }
 
 const MetricsCard = ({ title, metrics, className }) => (
-  <Card className={classNames('metrics-card', className)}>
-    <p className="metrics-card__title">{title}</p>
-    <CardDivider className="metrics-card__divider" />
-    <dl className="metrics-card__list">
+  <Card className={classNames('w-70 px-7 pt-7 pb-6', className)}>
+    <p className="text-lg">{title}</p>
+    <CardDivider className="mt-5 mb-4.5" />
+    <dl className="grid auto-rows-5 gap-y-4">
       {metrics.map(({ label, value, suffix, trend }) => (
-        <div key={label} className="metrics-card__row">
-          <dt className="metrics-card__label">{label}</dt>
-          <dd className="metrics-card__value">
+        <div key={label} className="flex items-center justify-between gap-3 text-sm">
+          <dt className="tracking-snug text-muted">{label}</dt>
+          <dd className="flex items-center gap-2 text-xs font-medium">
             <AssetSlot
-              className="metrics-card__trend"
+              className="size-2.25"
               src={TREND_ICONS[trend].src}
               alt={TREND_ICONS[trend].label}
               name={`trend-${trend}-icon`}
             />
             <span>
               {value}
-              {suffix && <span className="metrics-card__suffix">{suffix}</span>}
+              {suffix && <span className="text-subtle">{suffix}</span>}
             </span>
           </dd>
         </div>
