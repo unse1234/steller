@@ -1,5 +1,10 @@
 import { classNames } from '../../../utils/classNames.js'
-import './AssetSlot.css'
+
+/* Temporary stand-in for artwork that has not been supplied yet. */
+const PLACEHOLDER_SHAPES = {
+  rect: 'rounded-[4px]',
+  circle: 'rounded-[50%]',
+}
 
 /**
  * Renders an image asset, or a same-sized placeholder while the asset is
@@ -13,7 +18,11 @@ const AssetSlot = ({ src, alt = '', name, shape = 'rect', className }) => {
 
   return (
     <span
-      className={classNames('asset-slot', `asset-slot--${shape}`, className)}
+      className={classNames(
+        'block flex-none bg-placeholder outline-1 outline-dashed outline-placeholder-outline -outline-offset-1',
+        PLACEHOLDER_SHAPES[shape],
+        className,
+      )}
       data-asset={name}
       aria-hidden="true"
     />
