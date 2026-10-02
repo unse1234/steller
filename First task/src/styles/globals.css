@@ -58,7 +58,8 @@
     color: inherit;
   }
 
-  button {
+  button,
+  input {
     font: inherit;
     color: inherit;
   }
