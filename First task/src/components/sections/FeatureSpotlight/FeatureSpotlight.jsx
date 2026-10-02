@@ -7,7 +7,6 @@ import ButtonIcon from '../../ui/Button/ButtonIcon.jsx'
 import CheckList from '../../ui/CheckList/CheckList.jsx'
 import SectionHeading from '../../ui/SectionHeading/SectionHeading.jsx'
 import FeatureSpotlightVisual from './FeatureSpotlightVisual.jsx'
-import './FeatureSpotlight.css'
 
 const TITLE_ID = 'feature-spotlight-title'
 
@@ -22,8 +21,8 @@ const FeatureSpotlight = () => (
           titleId={TITLE_ID}
           description="Stellar is more than just a SaaS and technology template—it's a complete digital transformation solution."
         />
-        <CheckList className="feature-spotlight__features" items={featureSpotlight.features} />
-        <Button className="feature-spotlight__cta" href={accountLinks.signUp.href} size="lg">
+        <CheckList className="mt-7.25" items={featureSpotlight.features} />
+        <Button className="mt-11" href={accountLinks.signUp.href} size="lg">
           Get Free Trial
           <ButtonIcon src={assets.icons.arrowRight} name="arrow-icon" />
         </Button>
