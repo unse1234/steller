@@ -1,4 +1,5 @@
 import { testimonials } from '../../../data/testimonials.js'
+import Container from '../../layout/Container/Container.jsx'
 import Button from '../../ui/Button/Button.jsx'
 import PerspectiveGrid from '../../ui/PerspectiveGrid/PerspectiveGrid.jsx'
 import SectionHeading from '../../ui/SectionHeading/SectionHeading.jsx'
@@ -11,7 +12,7 @@ const Testimonials = () => (
   <section className="testimonials" aria-labelledby={TITLE_ID}>
     <PerspectiveGrid className="testimonials__grid" scene="ceiling" />
 
-    <div className="container container--compact">
+    <Container size="compact">
       <SectionHeading
         className="testimonials__heading"
         size="3xl"
@@ -33,7 +34,7 @@ const Testimonials = () => (
           Follow us on Social Media
         </Button>
       </div>
-    </div>
+    </Container>
   </section>
 )
 

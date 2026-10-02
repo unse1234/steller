@@ -32,7 +32,7 @@ const NewsletterForm = ({
       className={classNames('newsletter-form', `newsletter-form--${layout}`, className)}
       onSubmit={handleSubmit}
     >
-      <label className="visually-hidden" htmlFor={inputId}>
+      <label className="sr-only" htmlFor={inputId}>
         Email address
       </label>
       <input

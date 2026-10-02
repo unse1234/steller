@@ -1,5 +1,6 @@
 import { accountLinks } from '../../../data/navigation.js'
 import { trustedCompanies } from '../../../data/trustedCompanies.js'
+import Container from '../../layout/Container/Container.jsx'
 import Button from '../../ui/Button/Button.jsx'
 import LogoTicker from '../../ui/LogoTicker/LogoTicker.jsx'
 import './TrustedBy.css'
@@ -8,7 +9,7 @@ const TITLE_ID = 'trusted-by-title'
 
 const TrustedBy = () => (
   <section className="trusted-by" aria-labelledby={TITLE_ID}>
-    <div className="container trusted-by__inner">
+    <Container className="trusted-by__inner">
       <h2 id={TITLE_ID} className="trusted-by__title">
         The world&apos;s best companies trust Stellar.
       </h2>
@@ -23,7 +24,7 @@ const TrustedBy = () => (
       <Button className="trusted-by__cta" href={accountLinks.signUp.href} size="lg">
         Start your Stellar Journey
       </Button>
-    </div>
+    </Container>
   </section>
 )
 

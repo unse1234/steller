@@ -18,7 +18,7 @@ const BlogCard = ({ title, excerpt, href, tags, cover, coverLabel }) => (
     <h3 className="blog-card__title">{title}</h3>
     <p className="blog-card__excerpt">{excerpt}</p>
     <Button className="blog-card__cta" href={href}>
-      Read More<span className="visually-hidden">: {title}</span>
+      Read More<span className="sr-only">: {title}</span>
       <AssetSlot className="button__icon" src={assets.icons.arrowRight} name="arrow-icon" />
     </Button>
   </article>

@@ -1,4 +1,5 @@
 import { keyFeatures } from '../../../data/keyFeatures.js'
+import Container from '../../layout/Container/Container.jsx'
 import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
 import SectionHeading from '../../ui/SectionHeading/SectionHeading.jsx'
 import './KeyFeatures.css'
@@ -9,7 +10,7 @@ const { features, phones } = keyFeatures
 
 const KeyFeatures = () => (
   <section className="key-features" aria-labelledby={TITLE_ID}>
-    <div className="container container--compact key-features__inner">
+    <Container size="compact" className="key-features__inner">
       <div className="key-features__content">
         <SectionHeading
           size="xl"
@@ -43,7 +44,7 @@ const KeyFeatures = () => (
           name="phone-front"
         />
       </div>
-    </div>
+    </Container>
   </section>
 )
 

@@ -2,6 +2,7 @@ import { useEffect, useId, useRef, useState } from 'react'
 import { accountLinks, primaryNavigation } from '../../../data/navigation.js'
 import Button from '../../ui/Button/Button.jsx'
 import Logo from '../../ui/Logo/Logo.jsx'
+import Container from '../Container/Container.jsx'
 import './Navbar.css'
 
 const Navbar = () => {
@@ -35,7 +36,7 @@ const Navbar = () => {
 
   return (
     <header className="navbar">
-      <div className="container">
+      <Container>
         <nav ref={barRef} className="navbar__bar" aria-label="Primary">
           <Logo href="/" />
 
@@ -48,7 +49,7 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen((open) => !open)}
           >
             <span className="navbar__toggle-icon" aria-hidden="true" />
-            <span className="visually-hidden">{isMenuOpen ? 'Close menu' : 'Open menu'}</span>
+            <span className="sr-only">{isMenuOpen ? 'Close menu' : 'Open menu'}</span>
           </button>
 
           <div id={menuId} className="navbar__menu" data-open={isMenuOpen}>
@@ -77,7 +78,7 @@ const Navbar = () => {
             </div>
           </div>
         </nav>
-      </div>
+      </Container>
     </header>
   )
 }

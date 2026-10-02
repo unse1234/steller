@@ -1,4 +1,5 @@
 import { freeTrial } from '../../../data/freeTrial.js'
+import Container from '../../layout/Container/Container.jsx'
 import CheckList from '../../ui/CheckList/CheckList.jsx'
 import NewsletterForm from '../../ui/NewsletterForm/NewsletterForm.jsx'
 import PerspectiveGrid from '../../ui/PerspectiveGrid/PerspectiveGrid.jsx'
@@ -11,7 +12,7 @@ const FreeTrial = () => (
   <section className="free-trial" aria-labelledby={TITLE_ID}>
     <PerspectiveGrid className="free-trial__grid" scene="band" />
 
-    <div className="container container--medium free-trial__inner">
+    <Container size="medium" className="free-trial__inner">
       <SectionHeading
         className="free-trial__heading"
         size="xl"
@@ -27,7 +28,7 @@ const FreeTrial = () => (
         note={<CheckList className="free-trial__perks" items={freeTrial.perks} />}
         successMessage="Thanks! Check your inbox to start your free trial."
       />
-    </div>
+    </Container>
   </section>
 )
 

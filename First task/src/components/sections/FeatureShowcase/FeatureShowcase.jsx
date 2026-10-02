@@ -1,4 +1,5 @@
 import { featureShowcase } from '../../../data/featureShowcase.js'
+import Container from '../../layout/Container/Container.jsx'
 import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
 import PerspectiveGrid from '../../ui/PerspectiveGrid/PerspectiveGrid.jsx'
 import SectionHeading from '../../ui/SectionHeading/SectionHeading.jsx'
@@ -19,7 +20,7 @@ const FeatureShowcase = () => (
   <section className="feature-showcase" aria-labelledby={TITLE_ID}>
     <PerspectiveGrid className="feature-showcase__grid" scene="band" />
 
-    <div className="container">
+    <Container>
       <SectionHeading
         className="feature-showcase__heading"
         size="2xl"
@@ -52,7 +53,7 @@ const FeatureShowcase = () => (
           )
         })}
       </ul>
-    </div>
+    </Container>
   </section>
 )
 

@@ -1,3 +1,4 @@
+import Container from '../../layout/Container/Container.jsx'
 import PerspectiveGrid from '../../ui/PerspectiveGrid/PerspectiveGrid.jsx'
 import HeroShowcase from './HeroShowcase.jsx'
 import './Hero.css'
@@ -8,7 +9,7 @@ const Hero = () => (
   <section className="hero" aria-labelledby={TITLE_ID}>
     <PerspectiveGrid className="hero__backdrop" />
 
-    <div className="container">
+    <Container>
       <div className="hero__intro">
         <p className="hero__eyebrow">Our Framer Template</p>
         <h1 id={TITLE_ID} className="hero__title">
@@ -23,7 +24,7 @@ const Hero = () => (
       </div>
 
       <HeroShowcase className="hero__showcase" />
-    </div>
+    </Container>
   </section>
 )
 

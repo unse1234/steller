@@ -1,4 +1,5 @@
 import { assets } from '../../../assets/index.js'
+import Container from '../../layout/Container/Container.jsx'
 import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
 import Button from '../../ui/Button/Button.jsx'
 import SectionHeading from '../../ui/SectionHeading/SectionHeading.jsx'
@@ -9,7 +10,7 @@ const TITLE_ID = 'integrations-title'
 
 const Integrations = () => (
   <section id="integrations" className="integrations" aria-labelledby={TITLE_ID}>
-    <div className="container container--compact integrations__inner">
+    <Container size="compact" className="integrations__inner">
       <SectionHeading
         className="integrations__heading"
         size="xl"
@@ -35,7 +36,7 @@ const Integrations = () => (
         See Integrations
         <AssetSlot className="button__icon" src={assets.icons.arrowForward} name="arrow-icon" />
       </Button>
-    </div>
+    </Container>
   </section>
 )
 

@@ -17,7 +17,7 @@ const TestimonialCard = ({ title, quote, author, network }) => (
       </span>
       <span className="testimonial-card__network">
         <AssetSlot className="testimonial-card__network-icon" src={network.icon} name="network-icon" />
-        <span className="visually-hidden">on {network.name}</span>
+        <span className="sr-only">on {network.name}</span>
       </span>
     </figcaption>
   </Card>

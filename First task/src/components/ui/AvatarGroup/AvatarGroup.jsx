@@ -17,7 +17,7 @@ const AvatarGroup = ({ people, additionalCount = 0, className }) => (
     {additionalCount > 0 && (
       <li className="avatar-group__item avatar-group__overflow">
         <span aria-hidden="true">+{additionalCount}</span>
-        <span className="visually-hidden">and {additionalCount} more</span>
+        <span className="sr-only">and {additionalCount} more</span>
       </li>
     )}
   </ul>

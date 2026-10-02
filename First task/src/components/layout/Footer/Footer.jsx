@@ -1,13 +1,14 @@
 import { copyright, footerColumns, footerTagline, socialLinks } from '../../../data/footer.js'
 import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
 import Logo from '../../ui/Logo/Logo.jsx'
+import Container from '../Container/Container.jsx'
 import './Footer.css'
 
 const CURRENT_PATH = '/'
 
 const Footer = () => (
   <footer className="footer">
-    <div className="container container--medium">
+    <Container size="medium">
       <div className="footer__top">
         <div className="footer__brand">
           <Logo href="/" />
@@ -48,7 +49,7 @@ const Footer = () => (
           ))}
         </ul>
       </div>
-    </div>
+    </Container>
   </footer>
 )
 
