@@ -11,14 +11,14 @@
 .newsletter-form--inline {
   --newsletter-field-height: 50px;
 
-  row-gap: var(--space-6);
+  row-gap: calc(var(--spacing) * 6);
   max-inline-size: 461px;
 }
 
 @media (min-width: 640px) {
   .newsletter-form--inline {
     grid-template-columns: minmax(0, 1fr) auto;
-    column-gap: var(--space-4);
+    column-gap: calc(var(--spacing) * 4);
   }
 
   .newsletter-form--inline .newsletter-form__note {
@@ -28,18 +28,18 @@
 
 .newsletter-form__input {
   block-size: var(--newsletter-field-height, 48px);
-  padding-inline: var(--space-4);
+  padding-inline: calc(var(--spacing) * 4);
   font: inherit;
-  font-size: var(--font-size-md);
-  color: var(--color-text-primary);
+  font-size: var(--text-md);
+  color: var(--text-color-primary);
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-pill);
-  transition: border-color var(--duration-fast) var(--ease-standard);
+  transition: border-color var(--transition-duration-fast) var(--ease-standard);
 }
 
 .newsletter-form__input::placeholder {
-  color: var(--color-text-subtle);
+  color: var(--text-color-subtle);
 }
 
 .newsletter-form__input:hover {
@@ -53,11 +53,11 @@
 
 .newsletter-form__submit {
   block-size: var(--newsletter-field-height, 48px);
-  font-size: var(--font-size-md-plus);
+  font-size: var(--text-md-plus);
   font-weight: var(--font-weight-regular);
 }
 
 .newsletter-form__note {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  color: var(--text-color-muted);
 }

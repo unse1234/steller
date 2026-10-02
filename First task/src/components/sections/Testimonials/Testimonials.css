@@ -3,7 +3,7 @@
 
   position: relative;
   isolation: isolate;
-  padding-block: calc(var(--section-padding-block-lg) + 3px) 12px;
+  padding-block: calc(var(--spacing-section-lg) + 3px) 12px;
   background-color: var(--color-background-muted);
 }
 
@@ -45,7 +45,7 @@
 .testimonials__list {
   isolation: isolate;
   margin-inline: calc(-1 * var(--ring-width-sm));
-  column-gap: calc(var(--space-8) - 2 * var(--ring-width-sm));
+  column-gap: calc(calc(var(--spacing) * 8) - 2 * var(--ring-width-sm));
 }
 
 .testimonials__item {
@@ -55,7 +55,7 @@
 
 /* Truncated at column breaks, so only cards below another are pushed down. */
 .testimonials__item + .testimonials__item {
-  margin-block-start: calc(var(--space-8) - 2 * var(--ring-width-sm));
+  margin-block-start: calc(calc(var(--spacing) * 8) - 2 * var(--ring-width-sm));
 }
 
 .testimonials__cta {
@@ -63,7 +63,7 @@
   inset-block-end: 59px;
   inset-inline-start: 50%;
   z-index: 1;
-  font-size: var(--font-size-md);
+  font-size: var(--text-md);
   font-weight: var(--font-weight-regular);
   translate: -50% 0;
 }
@@ -82,28 +82,28 @@
 
 /* Card --------------------------------------------------------------------- */
 .testimonial-card {
-  padding: var(--space-8);
-  letter-spacing: var(--letter-spacing-snug);
+  padding: calc(var(--spacing) * 8);
+  letter-spacing: var(--tracking-snug);
   border-radius: var(--radius-md);
 }
 
 .testimonial-card__title {
-  font-size: var(--font-size-base);
+  font-size: var(--text-base);
   font-weight: var(--font-weight-medium);
   line-height: 24px;
 }
 
 .testimonial-card__quote {
-  margin: var(--space-3) 0 0;
-  font-size: var(--font-size-md);
-  line-height: var(--line-height-comfortable);
-  color: var(--color-text-secondary);
+  margin: calc(var(--spacing) * 3) 0 0;
+  font-size: var(--text-md);
+  line-height: var(--leading-comfortable);
+  color: var(--text-color-secondary);
 }
 
 .testimonial-card__author {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: calc(var(--spacing) * 4);
   margin-block-start: 40px;
 }
 
@@ -121,14 +121,14 @@
 }
 
 .testimonial-card__name {
-  font-size: var(--font-size-md);
+  font-size: var(--text-md);
   line-height: 24px;
 }
 
 .testimonial-card__handle {
-  font-size: var(--font-size-sm);
+  font-size: var(--text-sm);
   line-height: 20px;
-  color: var(--color-text-accent);
+  color: var(--text-color-accent);
 }
 
 .testimonial-card__network {

@@ -2,11 +2,11 @@
   display: inline-flex;
   align-items: center;
   gap: 0.3em;
-  font-size: var(--font-size-xl);
+  font-size: var(--text-xl);
   font-weight: var(--font-weight-bold);
   line-height: 1;
-  letter-spacing: var(--letter-spacing-tight);
-  color: var(--color-text-primary);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-color-primary);
   text-decoration: none;
 }
 

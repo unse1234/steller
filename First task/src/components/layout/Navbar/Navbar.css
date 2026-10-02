@@ -21,7 +21,7 @@
   align-items: center;
   min-block-size: 70px;
   margin: var(--navbar-ring);
-  padding: var(--space-3) var(--space-3) var(--space-3) var(--space-5);
+  padding: calc(var(--spacing) * 3) calc(var(--spacing) * 3) calc(var(--spacing) * 3) calc(var(--spacing) * 5);
   background-color: var(--color-surface);
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-pill);
@@ -36,14 +36,14 @@
 }
 
 .navbar__link {
-  font-size: var(--font-size-md);
-  color: var(--color-text-primary);
+  font-size: var(--text-md);
+  color: var(--text-color-primary);
   text-decoration: none;
-  transition: color var(--duration-fast) var(--ease-standard);
+  transition: color var(--transition-duration-fast) var(--ease-standard);
 }
 
 .navbar__link:hover {
-  color: var(--color-text-accent);
+  color: var(--text-color-accent);
 }
 
 /* Desktop: inline links grow slightly on hover. */
@@ -51,8 +51,8 @@
   .navbar__link {
     display: inline-block;
     transition:
-      color var(--duration-fast) var(--ease-standard),
-      transform var(--duration-fast) var(--ease-standard);
+      color var(--transition-duration-fast) var(--ease-standard),
+      transform var(--transition-duration-fast) var(--ease-standard);
   }
 
   .navbar__link:hover {
@@ -68,12 +68,12 @@
   inline-size: 44px;
   block-size: 44px;
   padding: 0;
-  color: var(--color-text-primary);
+  color: var(--text-color-primary);
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color var(--duration-fast) var(--ease-standard);
+  transition: background-color var(--transition-duration-fast) var(--ease-standard);
 }
 
 .navbar__toggle:hover {
@@ -94,7 +94,7 @@
   block-size: 1.5px;
   background-color: currentColor;
   border-radius: 1px;
-  transition: transform var(--duration-fast) var(--ease-standard);
+  transition: transform var(--transition-duration-fast) var(--ease-standard);
 }
 
 .navbar__toggle-icon::before {
@@ -117,12 +117,12 @@
 @media (max-width: 1119.98px) {
   .navbar__menu {
     position: absolute;
-    inset-block-start: calc(100% + var(--navbar-ring) + var(--space-3));
+    inset-block-start: calc(100% + var(--navbar-ring) + calc(var(--spacing) * 3));
     inset-inline: 0;
     display: none;
     flex-direction: column;
-    gap: var(--space-4);
-    padding: var(--space-3);
+    gap: calc(var(--spacing) * 4);
+    padding: calc(var(--spacing) * 3);
     background-color: var(--color-surface);
     border: 1px solid var(--color-border-subtle);
     border-radius: var(--radius-lg);
@@ -138,8 +138,8 @@
   .navbar__links .navbar__link,
   .navbar__actions > .navbar__link {
     display: block;
-    padding: var(--space-3) var(--space-4);
-    font-size: var(--font-size-base);
+    padding: calc(var(--spacing) * 3) calc(var(--spacing) * 4);
+    font-size: var(--text-base);
     border-radius: var(--radius-sm);
   }
 
@@ -151,8 +151,8 @@
   .navbar__actions {
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
-    padding-block-start: var(--space-4);
+    gap: calc(var(--spacing) * 2);
+    padding-block-start: calc(var(--spacing) * 4);
     border-block-start: 1px solid var(--color-border-subtle);
   }
 
@@ -191,13 +191,13 @@
 
   .navbar__links {
     display: flex;
-    gap: clamp(var(--space-6), 3.33vw, var(--space-12));
+    gap: clamp(calc(var(--spacing) * 6), 3.33vw, calc(var(--spacing) * 12));
   }
 
   .navbar__actions {
     display: flex;
     align-items: center;
     justify-self: end;
-    gap: var(--space-8);
+    gap: calc(var(--spacing) * 8);
   }
 }

@@ -27,12 +27,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-4);
+  gap: calc(var(--spacing) * 4);
   block-size: 28px;
 }
 
 .preview-card__title {
-  font-size: var(--font-size-lg);
+  font-size: var(--text-lg);
   font-weight: var(--font-weight-medium);
   font-variation-settings: var(--font-variation-display);
 }

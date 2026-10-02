@@ -15,31 +15,31 @@
 
 .free-trial__inner {
   display: grid;
-  gap: var(--space-10) var(--space-8);
+  gap: calc(var(--spacing) * 10) calc(var(--spacing) * 8);
 }
 
 .free-trial__heading .section-heading__description {
-  margin-block-start: var(--space-3);
-  font-size: var(--font-size-base);
+  margin-block-start: calc(var(--spacing) * 3);
+  font-size: var(--text-base);
   font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-normal);
+  line-height: var(--leading-normal);
 }
 
 .free-trial__heading .section-heading__title,
 .free-trial__heading .section-heading__description {
-  letter-spacing: var(--letter-spacing-snug);
+  letter-spacing: var(--tracking-snug);
 }
 
 .free-trial__perks {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-3) 40px;
-  color: var(--color-text-primary);
+  gap: calc(var(--spacing) * 3) 40px;
+  color: var(--text-color-primary);
 }
 
 .free-trial__perks .check-list__item {
-  font-size: var(--font-size-md);
-  letter-spacing: var(--letter-spacing-snug);
+  font-size: var(--text-md);
+  letter-spacing: var(--tracking-snug);
 }
 
 .free-trial__perks .check-list__icon {
@@ -61,6 +61,6 @@
 
 @media (max-width: 1119.98px) {
   .free-trial {
-    padding-block: var(--section-padding-block-lg);
+    padding-block: var(--spacing-section-lg);
   }
 }

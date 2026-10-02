@@ -2,10 +2,18 @@
  * Stylesheet entry point.
  *
  * Tailwind's theme and utilities are imported without Preflight: the
- * project's own base styles are the reset the design is calibrated against.
- * Only `src` is scanned for class names.
+ * project's own base styles (globals.css) are the reset the design is
+ * calibrated against. Only `src` is scanned for class names.
  */
 @layer theme, base, components, utilities;
 
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities) source('..');
+
+@import './variables.css';
+@import './globals.css';
+@import './utilities.css';
+
+/* Hover styles apply on every device, as plain `:hover` did, rather than
+   only where the primary input can hover. */
+@custom-variant hover (&:hover);

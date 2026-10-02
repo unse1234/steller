@@ -10,7 +10,7 @@
 .feature-spotlight-visual {
   isolation: isolate;
   display: grid;
-  row-gap: var(--space-8);
+  row-gap: calc(var(--spacing) * 8);
   inline-size: 100%;
 }
 

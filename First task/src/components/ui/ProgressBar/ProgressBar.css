@@ -9,9 +9,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: var(--font-size-xs);
+  font-size: var(--text-xs);
   font-weight: var(--font-weight-medium);
-  color: var(--color-text-secondary);
+  color: var(--text-color-secondary);
 }
 
 .progress-bar__fill {
@@ -34,7 +34,7 @@
 
 /* Track variant -------------------------------------------------------------- */
 .progress-bar--track {
-  gap: var(--space-3);
+  gap: calc(var(--spacing) * 3);
 }
 
 .progress-bar__track {

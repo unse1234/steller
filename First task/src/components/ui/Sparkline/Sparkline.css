@@ -7,7 +7,7 @@
 }
 
 .sparkline--neutral {
-  color: var(--color-text-muted);
+  color: var(--text-color-muted);
 }
 
 .sparkline__line {

@@ -10,14 +10,14 @@
   grid-template-areas:
     'start end'
     'device device';
-  column-gap: var(--space-3);
-  row-gap: var(--space-12);
+  column-gap: calc(var(--spacing) * 3);
+  row-gap: calc(var(--spacing) * 12);
 }
 
 .hero-showcase__stack {
   display: flex;
   flex-direction: column;
-  gap: var(--space-12);
+  gap: calc(var(--spacing) * 12);
 }
 
 .hero-showcase__stack--start {
@@ -39,7 +39,7 @@
   .hero-showcase__card {
     inline-size: 100%;
     max-inline-size: 176px;
-    padding: var(--space-5);
+    padding: calc(var(--spacing) * 5);
   }
 
   .hero-showcase__card .avatar-group {
@@ -53,7 +53,7 @@
 
 @media (min-width: 640px) {
   .hero-showcase {
-    column-gap: var(--space-6);
+    column-gap: calc(var(--spacing) * 6);
   }
 }
 

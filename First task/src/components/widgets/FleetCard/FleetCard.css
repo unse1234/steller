@@ -6,22 +6,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-4);
+  gap: calc(var(--spacing) * 4);
 }
 
 .fleet-card__title {
-  font-size: var(--font-size-md-plus);
+  font-size: var(--text-md-plus);
 }
 
 .fleet-card__summary {
-  margin-block-start: var(--space-1);
-  font-size: var(--font-size-2xs);
+  margin-block-start: calc(var(--spacing) * 1);
+  font-size: var(--text-2xs);
   font-weight: var(--font-weight-medium);
-  color: var(--color-text-muted);
+  color: var(--text-color-muted);
 }
 
 .fleet-card__divider {
-  margin-block: var(--space-5) 22px;
+  margin-block: calc(var(--spacing) * 5) 22px;
 }
 
 .fleet-card__list {
@@ -32,7 +32,7 @@
 .fleet-card__item {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: calc(var(--spacing) * 4);
 }
 
 .fleet-card__icon {
@@ -56,22 +56,22 @@
 }
 
 .fleet-card__name {
-  font-size: var(--font-size-sm);
+  font-size: var(--text-sm);
   font-weight: var(--font-weight-medium);
 }
 
 .fleet-card__detail {
   margin-block-start: 2px;
-  font-size: var(--font-size-2xs);
+  font-size: var(--text-2xs);
   font-weight: var(--font-weight-medium);
-  color: var(--color-text-muted);
+  color: var(--text-color-muted);
 }
 
 .fleet-card__value {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: var(--font-size-2xs);
+  font-size: var(--text-2xs);
   font-weight: var(--font-weight-medium);
 }
 

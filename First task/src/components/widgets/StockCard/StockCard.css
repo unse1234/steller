@@ -14,23 +14,23 @@
 
 .stock-card__periods {
   display: flex;
-  gap: var(--space-2);
+  gap: calc(var(--spacing) * 2);
 }
 
 .stock-card__period {
   display: grid;
   place-items: center;
   block-size: 20px;
-  padding-inline: var(--space-2);
-  font-size: var(--font-size-2xs);
+  padding-inline: calc(var(--spacing) * 2);
+  font-size: var(--text-2xs);
   line-height: 1;
-  color: var(--color-text-muted);
+  color: var(--text-color-muted);
   border: 1px solid transparent;
   border-radius: var(--radius-pill);
 }
 
 .stock-card__period--active {
-  color: var(--color-text-primary);
+  color: var(--text-color-primary);
   border-color: var(--color-border);
 }
 
@@ -47,15 +47,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-4);
+  gap: calc(var(--spacing) * 4);
 }
 
 .stock-card__meta {
   display: flex;
   align-items: center;
   gap: 18px;
-  font-size: var(--font-size-2xs);
-  color: var(--color-text-muted);
+  font-size: var(--text-2xs);
+  color: var(--text-color-muted);
 }
 
 /* Trend caret drawn as a small triangle before the percentage. */
@@ -72,7 +72,7 @@
 }
 
 .stock-card__change--up {
-  color: var(--color-text-accent);
+  color: var(--text-color-accent);
 }
 
 .stock-card__change--down::before {
@@ -80,8 +80,8 @@
 }
 
 .stock-card__price {
-  margin-block-start: var(--space-2);
-  font-size: var(--font-size-sm);
+  margin-block-start: calc(var(--spacing) * 2);
+  font-size: var(--text-sm);
   font-weight: var(--font-weight-medium);
 }
 

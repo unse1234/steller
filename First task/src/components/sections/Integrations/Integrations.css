@@ -1,5 +1,5 @@
 .integrations {
-  padding-block: var(--section-padding-block-lg);
+  padding-block: var(--spacing-section-lg);
 }
 
 .integrations__inner {
@@ -16,16 +16,16 @@
 
 .integrations__highlight {
   font-weight: var(--font-weight-regular);
-  color: var(--color-text-accent);
+  color: var(--text-color-accent);
 }
 
 .integrations__summary {
   max-inline-size: 37.5rem;
   margin-block-start: 66px;
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-relaxed);
-  letter-spacing: var(--letter-spacing-snug);
-  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  letter-spacing: var(--tracking-snug);
+  color: var(--text-color-secondary);
 }
 
 .integrations__cta {

@@ -16,13 +16,13 @@
 .analytics-preview__label {
   flex: none;
   inline-size: 76px;
-  font-size: var(--font-size-xs);
+  font-size: var(--text-xs);
 }
 
 .analytics-preview__bar {
   flex: 1;
   font-weight: var(--font-weight-regular);
-  color: var(--color-text-primary);
+  color: var(--text-color-primary);
 }
 
 .analytics-preview__bar .progress-bar__label {

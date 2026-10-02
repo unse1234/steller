@@ -2,12 +2,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-3);
+  gap: calc(var(--spacing) * 3);
   block-size: 42px;
-  padding-inline: var(--space-4);
+  padding-inline: calc(var(--spacing) * 4);
   border: 1px solid transparent;
   border-radius: var(--radius-pill);
-  font-size: var(--font-size-md);
+  font-size: var(--text-md);
   font-weight: var(--font-weight-regular);
   line-height: 1;
   white-space: nowrap;
@@ -21,9 +21,9 @@
   background-repeat: no-repeat;
   background-size: 0% 100%;
   transition:
-    background-size var(--duration-medium) var(--ease-standard),
-    color var(--duration-medium) var(--ease-standard),
-    border-color var(--duration-medium) var(--ease-standard);
+    background-size var(--transition-duration-medium) var(--ease-standard),
+    color var(--transition-duration-medium) var(--ease-standard),
+    border-color var(--transition-duration-medium) var(--ease-standard);
 }
 
 /* Only real controls react; decorative pills inside illustrations
@@ -38,14 +38,14 @@
 .button--lg {
   block-size: 48px;
   padding-inline: 18px;
-  font-size: var(--font-size-sm);
+  font-size: var(--text-sm);
   font-weight: var(--font-weight-medium);
 }
 
 .button--sm {
   block-size: 34px;
-  padding-inline: var(--space-3);
-  font-size: var(--font-size-2xs);
+  padding-inline: calc(var(--spacing) * 3);
+  font-size: var(--text-2xs);
   font-weight: var(--font-weight-medium);
 }
 
@@ -55,21 +55,21 @@
   inline-size: 24px;
   block-size: 24px;
   margin-inline: -4px;
-  transition: filter var(--duration-medium) var(--ease-standard);
+  transition: filter var(--transition-duration-medium) var(--ease-standard);
 }
 
 /* Outline: fills with the brand violet; label and icon turn white. */
 .button--outline {
   --button-fill: var(--color-violet-600);
 
-  color: var(--color-text-primary);
+  color: var(--text-color-primary);
   background-color: var(--color-surface);
   border-color: var(--color-border);
 }
 
 :is(a, button).button--outline:hover,
 :is(a, button).button--outline:focus-visible {
-  color: var(--color-text-inverse);
+  color: var(--text-color-inverse);
   border-color: var(--color-violet-600);
 }
 
@@ -82,7 +82,7 @@
 .button--primary {
   --button-fill: var(--color-violet-700);
 
-  color: var(--color-text-inverse);
+  color: var(--text-color-inverse);
   background-color: var(--color-violet-600);
 }
 
@@ -91,10 +91,10 @@
 .button--accent {
   --button-fill: var(--color-violet-700);
 
-  color: var(--color-text-inverse);
+  color: var(--text-color-inverse);
   background-image:
     linear-gradient(var(--button-fill), var(--button-fill)),
-    var(--gradient-accent);
+    var(--background-image-gradient-accent);
   background-size: 0% 100%, 100% 100%;
   border-color: transparent;
   box-shadow: var(--shadow-accent-button);
@@ -108,6 +108,6 @@
 .button--soft {
   --button-fill: var(--color-gray-100);
 
-  color: var(--color-text-primary);
+  color: var(--text-color-primary);
   background-color: var(--color-background-muted);
 }

@@ -7,13 +7,13 @@
   --split-content-width: 28.5rem; /* 456px */
 
   overflow-x: clip;
-  padding-block: var(--section-padding-block);
+  padding-block: var(--spacing-section);
 }
 
 .split-section__inner {
   display: grid;
   justify-items: center;
-  row-gap: var(--space-12);
+  row-gap: calc(var(--spacing) * 12);
 }
 
 .split-section__content {

@@ -1,50 +1,62 @@
 /*
- * Design tokens
+ * Design tokens, as a Tailwind theme.
  *
  * Values are taken from the 1440px desktop design. Fluid tokens interpolate
  * between a 375px mobile viewport and the 1440px desktop viewport.
  *
- * Breakpoints (media queries cannot read custom properties):
- *   640px  – tablet layout and up
- *   1120px – desktop layout (inline navigation, three-column hero showcase)
+ * Tailwind's default theme is cleared, so only these tokens produce
+ * utilities (`text-md`, `bg-surface`, `shadow-floating`, …). `static` keeps
+ * every token available as a CSS variable, including ones no utility uses.
+ * The class merger in utils/classNames.js lists the custom token names.
  */
 
-:root {
+@theme static {
+  --*: initial;
+
+  /* Spacing: utilities step in 4px (`p-3` = 12px, `gap-8` = 32px). */
+  --spacing: 0.25rem;
+
+  /* Breakpoints ----------------------------------------------------------- */
+  --breakpoint-tablet: 640px; /* tablet layout and up */
+  --breakpoint-desktop: 1120px; /* desktop layout: inline navigation, three-column hero showcase */
+  --breakpoint-wide: 1300px; /* the design's 1216px measure (see --scale-narrow-to-medium) */
+
   /* Typography ------------------------------------------------------------ */
-  --font-family-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
 
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  --font-size-2xs: 0.6875rem; /* 11px */
-  --font-size-xs: 0.75rem; /* 12px */
-  --font-size-sm: 0.8125rem; /* 13px */
-  --font-size-md: 0.875rem; /* 14px */
-  --font-size-md-plus: 0.9375rem; /* 15px */
-  --font-size-base: 1rem; /* 16px */
-  --font-size-lg: 1.125rem; /* 18px */
-  --font-size-xl: 1.625rem; /* 26px */
-  --font-size-2xl: 2rem; /* 32px */
-  --font-size-display-sm: clamp(1.875rem, 1.545rem + 1.408vw, 2.8125rem); /* 30px → 45px */
-  --font-size-display-md: clamp(2rem, 1.472rem + 2.254vw, 3.5rem); /* 32px → 56px */
-  --font-size-display-lg: clamp(2.25rem, 1.678rem + 2.441vw, 3.875rem); /* 36px → 62px */
-  --font-size-display-xl: clamp(2.25rem, 1.766rem + 2.066vw, 3.625rem); /* 36px → 58px */
+  --text-2xs: 0.6875rem; /* 11px */
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.8125rem; /* 13px */
+  --text-md: 0.875rem; /* 14px */
+  --text-md-plus: 0.9375rem; /* 15px */
+  --text-base: 1rem; /* 16px */
+  --text-lg: 1.125rem; /* 18px */
+  --text-xl: 1.625rem; /* 26px */
+  --text-2xl: 2rem; /* 32px */
+  --text-display-sm: clamp(1.875rem, 1.545rem + 1.408vw, 2.8125rem); /* 30px → 45px */
+  --text-display-md: clamp(2rem, 1.472rem + 2.254vw, 3.5rem); /* 32px → 56px */
+  --text-display-lg: clamp(2.25rem, 1.678rem + 2.441vw, 3.875rem); /* 36px → 62px */
+  --text-display-xl: clamp(2.25rem, 1.766rem + 2.066vw, 3.625rem); /* 36px → 58px */
 
-  /* Inter Display: the font's large optical size, used for headline type. */
+  /* Inter Display: the font's large optical size, used for headline type
+     (the `opsz-display` utility). */
   --font-variation-display: 'opsz' 32;
 
-  --line-height-tight: 1.2;
-  --line-height-normal: 1.5;
-  --line-height-comfortable: 1.67;
-  --line-height-relaxed: 2;
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-comfortable: 1.67;
+  --leading-relaxed: 2;
 
-  --letter-spacing-snug: -0.01em;
-  --letter-spacing-snugger: -0.02em;
-  --letter-spacing-tight: -0.04em;
-  --letter-spacing-tighter: -0.063em;
+  --tracking-snug: -0.01em;
+  --tracking-snugger: -0.02em;
+  --tracking-tight: -0.04em;
+  --tracking-tighter: -0.063em;
 
   /* Color palette --------------------------------------------------------- */
   --color-white: #ffffff;
@@ -66,12 +78,13 @@
   --color-violet-700: #5a3dd1;
 
   /* Semantic colors ------------------------------------------------------- */
-  --color-text-primary: var(--color-gray-950);
-  --color-text-secondary: var(--color-gray-700);
-  --color-text-muted: var(--color-gray-500);
-  --color-text-subtle: var(--color-gray-400);
-  --color-text-inverse: var(--color-white);
-  --color-text-accent: var(--color-violet-500);
+  /* Text colors only apply to `text-*` (`text-muted`, not `text-text-muted`). */
+  --text-color-primary: var(--color-gray-950);
+  --text-color-secondary: var(--color-gray-700);
+  --text-color-muted: var(--color-gray-500);
+  --text-color-subtle: var(--color-gray-400);
+  --text-color-inverse: var(--color-white);
+  --text-color-accent: var(--color-violet-500);
 
   --color-background: var(--color-white);
   --color-background-muted: var(--color-gray-50);
@@ -81,7 +94,7 @@
   --color-accent: var(--color-violet-500);
   --color-focus-ring: var(--color-violet-500);
 
-  --gradient-accent: linear-gradient(
+  --background-image-gradient-accent: linear-gradient(
     180deg,
     var(--color-violet-400) 0%,
     var(--color-violet-600) 100%
@@ -90,18 +103,6 @@
   /* Temporary asset placeholders (see components/ui/AssetSlot) */
   --color-placeholder: var(--color-violet-100);
   --color-placeholder-outline: var(--color-violet-300);
-
-  /* Spacing --------------------------------------------------------------- */
-  --space-1: 0.25rem; /* 4px */
-  --space-2: 0.5rem; /* 8px */
-  --space-3: 0.75rem; /* 12px */
-  --space-4: 1rem; /* 16px */
-  --space-5: 1.25rem; /* 20px */
-  --space-6: 1.5rem; /* 24px */
-  --space-7: 1.75rem; /* 28px */
-  --space-8: 2rem; /* 32px */
-  --space-10: 2.5rem; /* 40px */
-  --space-12: 3rem; /* 48px */
 
   /* Radii ----------------------------------------------------------------- */
   --radius-sm: 8px;
@@ -131,38 +132,49 @@
     0 6px 8px -4px rgb(127 81 242 / 0.3);
 
   /* Layout ---------------------------------------------------------------- */
-  --container-max-width: 85rem; /* 1360px */
-  --container-medium-max-width: 76rem; /* 1216px */
-  --container-narrow-max-width: 72rem; /* 1152px */
-  --container-compact-max-width: 67rem; /* 1072px */
+  --container-page: 85rem; /* 1360px */
+  --container-medium: 76rem; /* 1216px */
+  --container-narrow: 72rem; /* 1152px */
+  --container-compact: 67rem; /* 1072px */
   /* Trusted By, Meet Stellar and Get Started are sized in units of the narrow
      container; on wide screens the design sets them on the medium one. */
   --scale-narrow-to-medium: calc(1216 / 1152);
-  --page-gutter: var(--space-10);
-  --section-padding-block: 92px;
-  --section-padding-block-lg: 120px; /* sections on a tinted band */
+  /* Responsive: see the overrides below. */
+  --spacing-gutter: 2.5rem; /* 40px */
+  --spacing-section: 92px;
+  --spacing-section-lg: 120px; /* sections on a tinted band */
 
   /* Motion ---------------------------------------------------------------- */
-  --duration-fast: 150ms;
-  --duration-medium: 350ms;
+  --transition-duration-fast: 150ms;
+  --transition-duration-medium: 350ms;
   --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  --animate-logo-ticker: logo-ticker-scroll var(--logo-ticker-duration) linear infinite;
+
+  @keyframes logo-ticker-scroll {
+    to {
+      transform: translateX(calc(var(--logo-ticker-offset) - 50%));
+    }
+  }
 
   /* Layers ---------------------------------------------------------------- */
   --z-index-header: 100;
 }
 
-@media (max-width: 1119.98px) {
-  :root {
-    --page-gutter: var(--space-6);
-    --section-padding-block: 72px;
-    --section-padding-block-lg: 96px;
+@layer theme {
+  @media (width < 1120px) {
+    :root {
+      --spacing-gutter: 1.5rem; /* 24px */
+      --spacing-section: 72px;
+      --spacing-section-lg: 96px;
+    }
   }
-}
 
-@media (max-width: 639.98px) {
-  :root {
-    --page-gutter: var(--space-4);
-    --section-padding-block: 56px;
-    --section-padding-block-lg: 72px;
+  @media (width < 640px) {
+    :root {
+      --spacing-gutter: 1rem; /* 16px */
+      --spacing-section: 56px;
+      --spacing-section-lg: 72px;
+    }
   }
 }

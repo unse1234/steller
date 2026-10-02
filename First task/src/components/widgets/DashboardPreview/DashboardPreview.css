@@ -11,7 +11,7 @@
   gap: 4px;
   block-size: 32px;
   padding-inline: 8px 12px;
-  font-size: var(--font-size-md);
+  font-size: var(--text-md);
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-pill);
 }
@@ -49,7 +49,7 @@
 }
 
 .dashboard-preview__upload-title {
-  font-size: var(--font-size-md);
+  font-size: var(--text-md);
   font-weight: var(--font-weight-medium);
   font-variation-settings: var(--font-variation-display);
   line-height: 24px;
@@ -57,9 +57,9 @@
 
 .dashboard-preview__upload-text {
   margin-block-start: 4px;
-  font-size: var(--font-size-xs);
+  font-size: var(--text-xs);
   line-height: 20px;
-  color: var(--color-text-muted);
+  color: var(--text-color-muted);
 }
 
 .dashboard-preview__dropzone {
