@@ -19,7 +19,7 @@ npm run preview  # serve the production build
 src/
   assets/        images plus index.js, the asset manifest
   components/
-    layout/      page chrome and layout primitives (Navbar, SiteLayout, SplitSection)
+    layout/      page chrome and layout primitives (Navbar, Footer, SiteLayout, SplitSection)
     sections/    one folder per page section
     ui/          small reusable building blocks (Button, Card, SectionHeading, …)
     widgets/     product UI cards used inside section visuals

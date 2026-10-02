@@ -82,6 +82,10 @@ export const assets = {
     moreVertical: moreVerticalIcon,
     pieChart: pieChartIcon,
     siren: sirenIcon,
+    // Violet social glyphs (footer); not supplied yet.
+    facebook: null,
+    instagram: null,
+    twitter: null,
   },
   avatars: {
     attendeeOne: attendeeOneAvatar,
