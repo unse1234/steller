@@ -70,6 +70,7 @@ import dropboxLogo from './images/company-logos/dropbox.svg'
 
 // About page artwork
 import globeImage from './images/about/globe.png'
+import ourStoryImage from './images/about/our-story.jpg'
 
 // Blog covers
 import integrationMapCover from './images/blog-covers/integration-map.svg'
@@ -145,6 +146,7 @@ export const assets = {
   // About page photographs and artwork.
   about: {
     globe: globeImage,
+    ourStory: ourStoryImage,
   },
   // Blog cover art.
   covers: {
