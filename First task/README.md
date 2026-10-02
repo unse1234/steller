@@ -1,7 +1,7 @@
 # Stellar
 
 Landing page for Stellar, built from the Stellar Framer template with React 19,
-Vite and plain CSS.
+Vite and Tailwind CSS v4.
 
 ## Scripts
 
@@ -25,15 +25,26 @@ src/
     widgets/     product UI cards used inside section visuals
   data/          section content and sample data
   pages/         page compositions
-  styles/        design tokens, base styles and utilities
+  styles/        Tailwind entry, theme tokens, base styles and custom utilities
   utils/         helpers
 ```
 
 ## Conventions
 
-- **Components:** one folder per component with `Name.jsx` (default export) and `Name.css`.
-- **CSS:** BEM class names, logical properties, and design tokens from
-  `styles/variables.css` for colours, type, spacing and elevation.
+- **Components:** one folder per component with `Name.jsx` (default export).
+- **Styling:** Tailwind utilities in `className`, built from the theme in
+  `styles/variables.css` (Tailwind's defaults are cleared, so only the
+  design's colours, type scale, radii, shadows and breakpoints exist).
+  Breakpoints are `tablet:` (640px), `desktop:` (1120px) and `wide:`
+  (1300px). Write classes in Tailwind's canonical form, as the VS Code
+  extension suggests.
+- **Overrides:** components merge their `className` prop last through
+  `utils/classNames.js` (tailwind-merge), so a consumer's utility wins over
+  the component's default. Inner elements take props such as
+  `titleClassName` rather than descendant selectors. When adding a theme
+  token with a new name, list it in `classNames.js` too.
+- **Custom CSS:** only the base reset (`styles/globals.css`) and utilities
+  Tailwind lacks (`styles/utilities.css`). Preflight is not used.
 - **Assets:** files are kebab-case and named after what they depict, and every
   file is registered in `assets/index.js`. Data files decide what each asset
   is used for.
