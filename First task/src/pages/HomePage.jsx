@@ -1,6 +1,7 @@
 import Blog from '../components/sections/Blog/Blog.jsx'
 import FeatureShowcase from '../components/sections/FeatureShowcase/FeatureShowcase.jsx'
 import FeatureSpotlight from '../components/sections/FeatureSpotlight/FeatureSpotlight.jsx'
+import FreeTrial from '../components/sections/FreeTrial/FreeTrial.jsx'
 import GetStarted from '../components/sections/GetStarted/GetStarted.jsx'
 import Hero from '../components/sections/Hero/Hero.jsx'
 import Integrations from '../components/sections/Integrations/Integrations.jsx'
@@ -19,6 +20,7 @@ const HomePage = () => (
     <Integrations />
     <Testimonials />
     <Blog />
+    <FreeTrial />
   </>
 )
 

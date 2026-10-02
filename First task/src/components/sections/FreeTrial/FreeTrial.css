@@ -1,0 +1,81 @@
+.free-trial {
+  position: relative;
+  isolation: isolate;
+  padding-block: 139px 147px;
+  background-color: var(--color-background-muted);
+}
+
+/* The hero's grid artwork: one perspective band per half, as in the
+   Powerful Features section. */
+.free-trial::before,
+.free-trial::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  z-index: -1;
+  block-size: 50%;
+  background: url('../../../assets/images/backgrounds/perspective-grid.png') no-repeat;
+  background-size: 100% auto;
+}
+
+.free-trial::before {
+  inset-block-start: 0;
+  background-position: top center;
+}
+
+.free-trial::after {
+  inset-block-end: 0;
+  background-position: bottom center;
+}
+
+.free-trial__inner {
+  display: grid;
+  gap: var(--space-10) var(--space-8);
+}
+
+.free-trial__heading .section-heading__description {
+  margin-block-start: var(--space-3);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+}
+
+.free-trial__heading .section-heading__title,
+.free-trial__heading .section-heading__description {
+  letter-spacing: var(--letter-spacing-snug);
+}
+
+.free-trial__perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) 40px;
+  color: var(--color-text-primary);
+}
+
+.free-trial__perks .check-list__item {
+  font-size: var(--font-size-md);
+  letter-spacing: var(--letter-spacing-snug);
+}
+
+.free-trial__perks .check-list__icon {
+  inline-size: 24px;
+  block-size: 24px;
+}
+
+@media (min-width: 1120px) {
+  .free-trial__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 28.8125rem); /* form: 461px */
+    align-items: end;
+  }
+
+  /* The form's foot sits 8px below the copy's last line. */
+  .free-trial__form {
+    margin-block-end: -8px;
+  }
+}
+
+@media (max-width: 1119.98px) {
+  .free-trial {
+    padding-block: var(--section-padding-block-lg);
+  }
+}

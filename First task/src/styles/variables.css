@@ -125,6 +125,7 @@
 
   /* Layout ---------------------------------------------------------------- */
   --container-max-width: 85rem; /* 1360px */
+  --container-medium-max-width: 76rem; /* 1216px */
   --container-narrow-max-width: 72rem; /* 1152px */
   --container-compact-max-width: 67rem; /* 1072px */
   --page-gutter: var(--space-10);

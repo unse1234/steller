@@ -5,9 +5,17 @@ import './NewsletterForm.css'
 
 /**
  * Email capture form. Native validation (`type="email"`, `required`) runs
- * before `onSubscribe`; the note below the button announces the result.
+ * before `onSubscribe`; the note below the fields announces the result.
+ * `layout="inline"` sets the button beside the field from tablet width up.
  */
-const NewsletterForm = ({ submitLabel, note, successMessage, onSubscribe, className }) => {
+const NewsletterForm = ({
+  submitLabel,
+  note,
+  successMessage,
+  onSubscribe,
+  layout = 'stacked',
+  className,
+}) => {
   const inputId = useId()
   const [isSubscribed, setIsSubscribed] = useState(false)
 
@@ -20,7 +28,10 @@ const NewsletterForm = ({ submitLabel, note, successMessage, onSubscribe, classN
   }
 
   return (
-    <form className={classNames('newsletter-form', className)} onSubmit={handleSubmit}>
+    <form
+      className={classNames('newsletter-form', `newsletter-form--${layout}`, className)}
+      onSubmit={handleSubmit}
+    >
       <label className="visually-hidden" htmlFor={inputId}>
         Email address
       </label>
@@ -36,9 +47,9 @@ const NewsletterForm = ({ submitLabel, note, successMessage, onSubscribe, classN
       <Button className="newsletter-form__submit" type="submit" variant="primary" size="lg">
         {submitLabel}
       </Button>
-      <p className="newsletter-form__note" aria-live="polite">
+      <div className="newsletter-form__note" aria-live="polite">
         {isSubscribed ? successMessage : note}
-      </p>
+      </div>
     </form>
   )
 }

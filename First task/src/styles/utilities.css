@@ -7,6 +7,10 @@
   padding-inline: var(--page-gutter);
 }
 
+.container--medium {
+  max-inline-size: calc(var(--container-medium-max-width) + 2 * var(--page-gutter));
+}
+
 .container--narrow {
   max-inline-size: calc(var(--container-narrow-max-width) + 2 * var(--page-gutter));
 }

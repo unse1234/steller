@@ -1,11 +1,33 @@
 .newsletter-form {
   display: grid;
   row-gap: 15px;
+}
+
+.newsletter-form--stacked {
   max-inline-size: 340px;
 }
 
+/* Field and button side by side, the note spanning both. */
+.newsletter-form--inline {
+  --newsletter-field-height: 50px;
+
+  row-gap: var(--space-6);
+  max-inline-size: 461px;
+}
+
+@media (min-width: 640px) {
+  .newsletter-form--inline {
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: var(--space-4);
+  }
+
+  .newsletter-form--inline .newsletter-form__note {
+    grid-column: 1 / -1;
+  }
+}
+
 .newsletter-form__input {
-  block-size: 48px;
+  block-size: var(--newsletter-field-height, 48px);
   padding-inline: var(--space-4);
   font: inherit;
   font-size: var(--font-size-md);
@@ -30,6 +52,7 @@
 }
 
 .newsletter-form__submit {
+  block-size: var(--newsletter-field-height, 48px);
   font-size: var(--font-size-md-plus);
   font-weight: var(--font-weight-regular);
 }
