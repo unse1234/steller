@@ -1,5 +1,6 @@
 import { classNames } from '../../../utils/classNames.js'
 import Card from '../../ui/Card/Card.jsx'
+import CardDivider from '../../ui/Card/CardDivider.jsx'
 import Sparkline from '../../ui/Sparkline/Sparkline.jsx'
 import './StockCard.css'
 
@@ -25,7 +26,7 @@ const StockCard = ({ title, periods, activePeriod, stocks, className }) => (
       </ul>
     </div>
 
-    <hr className="card__divider stock-card__divider" />
+    <CardDivider className="stock-card__divider" />
 
     <ul className="stock-card__list">
       {stocks.map(({ symbol, change, trend, price, chart }) => (

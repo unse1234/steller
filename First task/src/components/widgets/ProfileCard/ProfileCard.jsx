@@ -2,6 +2,7 @@ import { classNames } from '../../../utils/classNames.js'
 import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
 import Avatar from '../../ui/Avatar/Avatar.jsx'
 import Card from '../../ui/Card/Card.jsx'
+import CardDivider from '../../ui/Card/CardDivider.jsx'
 import './ProfileCard.css'
 
 const ProfileCard = ({ greeting, prompt, person, location, className }) => (
@@ -19,7 +20,7 @@ const ProfileCard = ({ greeting, prompt, person, location, className }) => (
       </div>
     </div>
 
-    <hr className="card__divider profile-card__divider" />
+    <CardDivider className="profile-card__divider" />
 
     <p className="profile-card__location">
       <AssetSlot className="profile-card__location-icon" src={location.icon} name="location-icon" />

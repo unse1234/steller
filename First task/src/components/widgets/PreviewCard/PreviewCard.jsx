@@ -2,6 +2,7 @@ import { assets } from '../../../assets/index.js'
 import { classNames } from '../../../utils/classNames.js'
 import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
 import Card from '../../ui/Card/Card.jsx'
+import CardDivider from '../../ui/Card/CardDivider.jsx'
 import './PreviewCard.css'
 
 /**
@@ -19,7 +20,7 @@ const PreviewCard = ({ title, fade = false, className, children }) => (
             <AssetSlot className="preview-card__menu-icon" src={assets.icons.moreVertical} name="more-icon" />
           </span>
         </div>
-        <hr className="card__divider preview-card__divider" />
+        <CardDivider className="preview-card__divider" />
         {children}
       </div>
     </div>

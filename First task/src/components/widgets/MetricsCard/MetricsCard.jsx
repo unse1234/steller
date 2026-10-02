@@ -2,6 +2,7 @@ import { assets } from '../../../assets/index.js'
 import { classNames } from '../../../utils/classNames.js'
 import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
 import Card from '../../ui/Card/Card.jsx'
+import CardDivider from '../../ui/Card/CardDivider.jsx'
 import './MetricsCard.css'
 
 const TREND_ICONS = {
@@ -12,7 +13,7 @@ const TREND_ICONS = {
 const MetricsCard = ({ title, metrics, className }) => (
   <Card className={classNames('metrics-card', className)}>
     <p className="metrics-card__title">{title}</p>
-    <hr className="card__divider metrics-card__divider" />
+    <CardDivider className="metrics-card__divider" />
     <dl className="metrics-card__list">
       {metrics.map(({ label, value, suffix, trend }) => (
         <div key={label} className="metrics-card__row">

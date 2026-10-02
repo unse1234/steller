@@ -3,6 +3,7 @@ import { classNames } from '../../../utils/classNames.js'
 import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
 import Button from '../../ui/Button/Button.jsx'
 import Card from '../../ui/Card/Card.jsx'
+import CardDivider from '../../ui/Card/CardDivider.jsx'
 import './FleetCard.css'
 
 const FleetCard = ({ title, summary, actionLabel, items, className }) => (
@@ -17,7 +18,7 @@ const FleetCard = ({ title, summary, actionLabel, items, className }) => (
       </Button>
     </div>
 
-    <hr className="card__divider fleet-card__divider" />
+    <CardDivider className="fleet-card__divider" />
 
     <ul className="fleet-card__list">
       {items.map(({ name, detail, icon, value }) => (
