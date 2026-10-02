@@ -74,6 +74,10 @@ const HALVES = {
   floor: 'absolute inset-x-0 bottom-0 h-1/2 overflow-hidden',
 }
 
+/* Disc: a muted round window, lighter at the top, showing the floor below. */
+const DISC =
+  'aspect-square rounded-[50%] bg-[linear-gradient(180deg,var(--color-surface)_0%,var(--color-gray-50)_40%,var(--color-gray-100)_100%)]'
+
 const round = (value) => Math.round(value * 100) / 100
 
 /** Path data for a plane's rows and columns, from the frame edge to its fade. */
@@ -175,11 +179,15 @@ const GridArt = ({ id, scene, pin }) => {
  * - `band`: a mirrored ceiling pinned to the top edge and a floor pinned to
  *   the bottom edge, each at full width and its own proportions.
  * - `ceiling`: the band's top edge only.
- * - `disc`: a floor seen through a round window; clip the box to a circle.
+ * - `disc`: a floor seen through a muted round window; set its width.
  */
 const PerspectiveGrid = ({ scene = 'hero', className }) => {
   const id = useId()
-  const rootClassName = classNames('pointer-events-none relative overflow-hidden text-gray-200', className)
+  const rootClassName = classNames(
+    'pointer-events-none relative overflow-hidden text-gray-200',
+    scene === 'disc' && DISC,
+    className,
+  )
 
   if (scene === 'band') {
     return (
