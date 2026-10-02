@@ -13,8 +13,10 @@
   white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
-  /* Hover fill: a solid layer that sweeps in from the left. */
+  /* Hover fill: a solid layer that sweeps in from the left. Layers start at
+     the border edge so the transparent border never shows a gap. */
   background-image: linear-gradient(var(--button-fill), var(--button-fill));
+  background-origin: border-box;
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 0% 100%;
@@ -95,7 +97,7 @@
     var(--gradient-accent);
   background-size: 0% 100%, 100% 100%;
   border-color: transparent;
-  box-shadow: var(--shadow-accent-pill);
+  box-shadow: var(--shadow-accent-button);
 }
 
 :is(a, button).button--accent:hover,
