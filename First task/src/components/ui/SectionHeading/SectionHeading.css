@@ -21,7 +21,8 @@
 
 /* Display sizes: Inter's display optical size, set without tracking. */
 .section-heading--xl .section-heading__title,
-.section-heading--2xl .section-heading__title {
+.section-heading--2xl .section-heading__title,
+.section-heading--3xl .section-heading__title {
   font-variation-settings: var(--font-variation-display);
   letter-spacing: normal;
 }
@@ -36,7 +37,8 @@
   line-height: 1.285;
 }
 
-.section-heading--2xl .section-heading__eyebrow {
+.section-heading--2xl .section-heading__eyebrow,
+.section-heading--3xl .section-heading__eyebrow {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
 }
@@ -44,6 +46,11 @@
 .section-heading--2xl .section-heading__title {
   font-size: var(--font-size-display-xl);
   line-height: 1.39;
+}
+
+.section-heading--3xl .section-heading__title {
+  font-size: var(--font-size-display-lg);
+  line-height: 1.25;
 }
 
 .section-heading__description {

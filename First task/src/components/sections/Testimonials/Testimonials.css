@@ -1,0 +1,151 @@
+.testimonials {
+  --testimonials-fade-height: 256px;
+
+  position: relative;
+  isolation: isolate;
+  padding-block: calc(var(--section-padding-block-lg) + 3px) 12px;
+  background-color: var(--color-background-muted);
+}
+
+/* Perspective band from the hero's grid artwork along the top edge. */
+.testimonials::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: -1;
+  block-size: 50%;
+  background: url('../../../assets/images/backgrounds/perspective-grid.png') no-repeat top center;
+  background-size: 100% auto;
+}
+
+/* The foot darkens, fading the last cards out under the call to action. */
+.testimonials::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  block-size: var(--testimonials-fade-height);
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-gray-150) 0%, transparent) 0%,
+    var(--color-gray-150) 90%
+  );
+  pointer-events: none;
+}
+
+/* Keeps the design's break after "our". */
+.testimonials__heading .section-heading__title {
+  max-inline-size: 9.6em;
+}
+
+/* Masonry wall: cards flow down each column in turn. */
+.testimonials__wall {
+  position: relative;
+  margin-block-start: 58px;
+}
+
+/* Items are padded to make room for each card's outer ring; gaps measure
+   32px between card borders. */
+.testimonials__list {
+  isolation: isolate;
+  margin-inline: calc(-1 * var(--ring-width-sm));
+  column-gap: calc(var(--space-8) - 2 * var(--ring-width-sm));
+}
+
+.testimonials__item {
+  break-inside: avoid;
+  padding: var(--ring-width-sm);
+}
+
+/* Truncated at column breaks, so only cards below another are pushed down. */
+.testimonials__item + .testimonials__item {
+  margin-block-start: calc(var(--space-8) - 2 * var(--ring-width-sm));
+}
+
+.testimonials__cta {
+  position: absolute;
+  inset-block-end: 59px;
+  inset-inline-start: 50%;
+  z-index: 1;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  translate: -50% 0;
+}
+
+@media (min-width: 640px) {
+  .testimonials__list {
+    columns: 2;
+  }
+}
+
+@media (min-width: 1120px) {
+  .testimonials__list {
+    columns: 3;
+  }
+}
+
+/* Card --------------------------------------------------------------------- */
+.testimonial-card {
+  padding: var(--space-8);
+  letter-spacing: var(--letter-spacing-snug);
+  border-radius: var(--radius-md);
+}
+
+.testimonial-card__title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: 24px;
+}
+
+.testimonial-card__quote {
+  margin: var(--space-3) 0 0;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-comfortable);
+  color: var(--color-text-secondary);
+}
+
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-block-start: 40px;
+}
+
+.testimonial-card__avatar {
+  --avatar-size: 48px;
+
+  flex: none;
+}
+
+.testimonial-card__person {
+  display: grid;
+  row-gap: 2px;
+  min-inline-size: 0;
+  margin-inline-end: auto;
+}
+
+.testimonial-card__name {
+  font-size: var(--font-size-md);
+  line-height: 24px;
+}
+
+.testimonial-card__handle {
+  font-size: var(--font-size-sm);
+  line-height: 20px;
+  color: var(--color-text-accent);
+}
+
+.testimonial-card__network {
+  display: grid;
+  flex: none;
+  place-items: center;
+  inline-size: 48px;
+  aspect-ratio: 1;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 50%;
+}
+
+.testimonial-card__network-icon {
+  inline-size: 20px;
+  block-size: 20px;
+  object-fit: contain;
+}

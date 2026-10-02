@@ -88,6 +88,10 @@ export const assets = {
     attendeeTwo: attendeeTwoAvatar,
     attendeeThree: attendeeThreeAvatar,
     sarahSmith: sarahSmithAvatar,
+    // Not supplied yet.
+    amayaLocosta: null,
+    figNelson: null,
+    sadieBerlin: null,
   },
   companyLogos: {
     amplitude: amplitudeLogo,
