@@ -2,13 +2,12 @@ import SplitSection from '../../layout/SplitSection/SplitSection.jsx'
 import NewsletterForm from '../../ui/NewsletterForm/NewsletterForm.jsx'
 import SectionHeading from '../../ui/SectionHeading/SectionHeading.jsx'
 import GetStartedVisual from './GetStartedVisual.jsx'
-import './GetStarted.css'
 
 const TITLE_ID = 'get-started-title'
 
 const GetStarted = () => (
   <SplitSection
-    className="get-started"
+    className="[--split-content-width:30.25rem] desktop:pt-19.5 desktop:pb-41.25"
     labelledBy={TITLE_ID}
     mediaFirst
     content={
@@ -23,7 +22,7 @@ const GetStarted = () => (
           description="Unlock the power of data analytics and gain actionable insights to make informed business decisions."
         />
         <NewsletterForm
-          className="get-started__form"
+          className="mt-7.5"
           submitLabel="Subscribe"
           note="14 day trial – No credit card required"
           successMessage="Thanks! Check your inbox to confirm your subscription."
