@@ -4,7 +4,6 @@ import AvatarGroup from '../../ui/AvatarGroup/AvatarGroup.jsx'
 import Button from '../../ui/Button/Button.jsx'
 import Card from '../../ui/Card/Card.jsx'
 import ProgressBar from '../../ui/ProgressBar/ProgressBar.jsx'
-import './WorkspaceCard.css'
 
 const WorkspaceCard = ({
   name,
@@ -17,27 +16,27 @@ const WorkspaceCard = ({
   actionLabel,
   className,
 }) => (
-  <Card className={classNames('workspace-card', className)}>
-    <div className="workspace-card__header">
+  <Card className={classNames('p-6', className)}>
+    <div className="flex items-center justify-between gap-4">
       <div>
-        <p className="workspace-card__name">{name}</p>
-        <p className="workspace-card__updated">{updated}</p>
+        <p className="text-xs">{name}</p>
+        <p className="text-xs text-muted">{updated}</p>
       </div>
-      <span className="workspace-card__logo">
-        <AssetSlot className="workspace-card__logo-mark" src={logo} alt={name} name="company-logo" />
+      <span className="grid aspect-square w-10.25 flex-none place-items-center rounded-[50%] border border-border-subtle bg-surface">
+        <AssetSlot className="size-4" src={logo} alt={name} name="company-logo" />
       </span>
     </div>
 
-    <ProgressBar className="workspace-card__progress" value={progress} showTrack />
+    <ProgressBar className="mt-4 text-2xs font-regular text-primary" value={progress} showTrack />
 
-    <p className="workspace-card__members-label">{membersLabel}</p>
-    <div className="workspace-card__footer">
+    <p className="mt-3 text-2xs font-medium text-secondary">{membersLabel}</p>
+    <div className="mt-2.5 flex items-center justify-between gap-3">
       <AvatarGroup
-        className="workspace-card__members"
+        className="[--avatar-group-size:36px]"
         people={members}
         additionalCount={additionalMembers}
       />
-      <Button as="span" className="workspace-card__action" variant="soft" size="sm">
+      <Button as="span" className="h-9.5" variant="soft" size="sm">
         {actionLabel}
       </Button>
     </div>
