@@ -1,9 +1,0 @@
-/*
- * Visible (cropped) part of the phone: 497 × 401px at desktop, including the
- * artwork's transparent margins around the side buttons.
- */
-.device-mockup {
-  inline-size: 497px;
-  max-inline-size: 100%;
-  aspect-ratio: 359 / 290;
-}
