@@ -1,5 +1,6 @@
 import { testimonials } from '../../../data/testimonials.js'
 import Button from '../../ui/Button/Button.jsx'
+import PerspectiveGrid from '../../ui/PerspectiveGrid/PerspectiveGrid.jsx'
 import SectionHeading from '../../ui/SectionHeading/SectionHeading.jsx'
 import TestimonialCard from './TestimonialCard.jsx'
 import './Testimonials.css'
@@ -8,6 +9,8 @@ const TITLE_ID = 'testimonials-title'
 
 const Testimonials = () => (
   <section className="testimonials" aria-labelledby={TITLE_ID}>
+    <PerspectiveGrid className="testimonials__grid" scene="ceiling" />
+
     <div className="container container--compact">
       <SectionHeading
         className="testimonials__heading"

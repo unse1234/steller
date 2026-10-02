@@ -1,3 +1,4 @@
+import PerspectiveGrid from '../../ui/PerspectiveGrid/PerspectiveGrid.jsx'
 import HeroShowcase from './HeroShowcase.jsx'
 import './Hero.css'
 
@@ -5,7 +6,7 @@ const TITLE_ID = 'hero-title'
 
 const Hero = () => (
   <section className="hero" aria-labelledby={TITLE_ID}>
-    <div className="hero__backdrop" aria-hidden="true" />
+    <PerspectiveGrid className="hero__backdrop" />
 
     <div className="container">
       <div className="hero__intro">

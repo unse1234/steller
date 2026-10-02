@@ -5,27 +5,12 @@
   background-color: var(--color-background-muted);
 }
 
-/* The hero's grid artwork: one perspective band per half, as in the
-   Powerful Features section. */
-.free-trial::before,
-.free-trial::after {
-  content: '';
+/* The hero's perspective grid, split across the band as in the Powerful
+   Features section. */
+.free-trial__grid {
   position: absolute;
-  inset-inline: 0;
+  inset: 0;
   z-index: -1;
-  block-size: 50%;
-  background: url('../../../assets/images/backgrounds/perspective-grid.png') no-repeat;
-  background-size: 100% auto;
-}
-
-.free-trial::before {
-  inset-block-start: 0;
-  background-position: top center;
-}
-
-.free-trial::after {
-  inset-block-end: 0;
-  background-position: bottom center;
 }
 
 .free-trial__inner {

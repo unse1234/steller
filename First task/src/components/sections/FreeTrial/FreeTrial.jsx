@@ -1,6 +1,7 @@
 import { freeTrial } from '../../../data/freeTrial.js'
 import CheckList from '../../ui/CheckList/CheckList.jsx'
 import NewsletterForm from '../../ui/NewsletterForm/NewsletterForm.jsx'
+import PerspectiveGrid from '../../ui/PerspectiveGrid/PerspectiveGrid.jsx'
 import SectionHeading from '../../ui/SectionHeading/SectionHeading.jsx'
 import './FreeTrial.css'
 
@@ -8,6 +9,8 @@ const TITLE_ID = 'free-trial-title'
 
 const FreeTrial = () => (
   <section className="free-trial" aria-labelledby={TITLE_ID}>
+    <PerspectiveGrid className="free-trial__grid" scene="band" />
+
     <div className="container container--medium free-trial__inner">
       <SectionHeading
         className="free-trial__heading"

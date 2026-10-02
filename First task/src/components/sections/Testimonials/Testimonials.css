@@ -7,15 +7,12 @@
   background-color: var(--color-background-muted);
 }
 
-/* Perspective band from the hero's grid artwork along the top edge. */
-.testimonials::before {
-  content: '';
+/* The hero's perspective-grid ceiling across the top half of the band. */
+.testimonials__grid {
   position: absolute;
   inset: 0 0 auto;
   z-index: -1;
   block-size: 50%;
-  background: url('../../../assets/images/backgrounds/perspective-grid.png') no-repeat top center;
-  background-size: 100% auto;
 }
 
 /* The foot darkens, fading the last cards out under the call to action. */

@@ -1,5 +1,6 @@
 import { featureShowcase } from '../../../data/featureShowcase.js'
 import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
+import PerspectiveGrid from '../../ui/PerspectiveGrid/PerspectiveGrid.jsx'
 import SectionHeading from '../../ui/SectionHeading/SectionHeading.jsx'
 import AnalyticsPreview from '../../widgets/AnalyticsPreview/AnalyticsPreview.jsx'
 import DashboardPreview from '../../widgets/DashboardPreview/DashboardPreview.jsx'
@@ -16,6 +17,8 @@ const PREVIEWS = {
 
 const FeatureShowcase = () => (
   <section className="feature-showcase" aria-labelledby={TITLE_ID}>
+    <PerspectiveGrid className="feature-showcase__grid" scene="band" />
+
     <div className="container">
       <SectionHeading
         className="feature-showcase__heading"

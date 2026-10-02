@@ -1,0 +1,46 @@
+/* Size and place the grid from the consumer; the art follows its box. */
+.perspective-grid {
+  position: relative;
+  overflow: hidden;
+  color: var(--color-gray-200);
+  pointer-events: none;
+}
+
+.perspective-grid__art {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+/* Pinned art: full width at the scene's own proportions (set inline),
+   cropped by its box. */
+.perspective-grid__art--top,
+.perspective-grid__art--bottom {
+  position: absolute;
+  inset-inline: 0;
+  block-size: auto;
+}
+
+.perspective-grid__art--top {
+  inset-block-start: 0;
+}
+
+.perspective-grid__art--bottom {
+  inset-block-end: 0;
+}
+
+/* Band: each half of the box shows one edge of the grid. */
+.perspective-grid__half {
+  position: absolute;
+  inset-inline: 0;
+  block-size: 50%;
+  overflow: hidden;
+}
+
+.perspective-grid__half--ceiling {
+  inset-block-start: 0;
+}
+
+.perspective-grid__half--floor {
+  inset-block-end: 0;
+}
