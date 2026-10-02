@@ -3,6 +3,7 @@ import Container from '../../layout/Container/Container.jsx'
 import Button from '../../ui/Button/Button.jsx'
 import PerspectiveGrid from '../../ui/PerspectiveGrid/PerspectiveGrid.jsx'
 import SectionHeading from '../../ui/SectionHeading/SectionHeading.jsx'
+import { classNames } from '../../../utils/classNames.js'
 import TestimonialCard from './TestimonialCard.jsx'
 
 const TITLE_ID = 'testimonials-title'
@@ -14,8 +15,8 @@ const SECTION = [
   'after:bg-[linear-gradient(180deg,color-mix(in_srgb,var(--color-gray-150)_0%,transparent)_0%,var(--color-gray-150)_90%)]',
 ].join(' ')
 
-const Testimonials = () => (
-  <section className={SECTION} aria-labelledby={TITLE_ID}>
+const Testimonials = ({ className }) => (
+  <section className={classNames(SECTION, className)} aria-labelledby={TITLE_ID}>
     {/* The hero's perspective-grid ceiling across the top half of the band. */}
     <PerspectiveGrid className="absolute inset-x-0 top-0 -z-1 h-1/2" scene="ceiling" />
 
