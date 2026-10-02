@@ -1,6 +1,0 @@
-.avatar {
-  inline-size: var(--avatar-size, 40px);
-  block-size: var(--avatar-size, 40px);
-  border-radius: 50%;
-  object-fit: cover;
-}
