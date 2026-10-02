@@ -34,8 +34,8 @@
     position: absolute;
   }
 
-  /* Muted disc behind the cards; the perspective-grid artwork layers onto it
-     once supplied. Sits below the cards' shadows (z-index −1). */
+  /* Muted disc behind the cards with the perspective-grid floor showing
+     through its lower half. Sits below the cards' shadows (z-index −1). */
   .feature-spotlight-visual__backdrop {
     display: block;
     inset-inline-start: 81px;

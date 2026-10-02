@@ -50,7 +50,8 @@
     position: absolute;
   }
 
-  /* Muted disc behind the cards, below their shadows (z-index −1). */
+  /* Muted disc behind the cards with the perspective-grid floor showing
+     through its lower half, below their shadows (z-index −1). */
   .get-started-visual__backdrop {
     display: block;
     inset-inline-start: 64px;

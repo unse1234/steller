@@ -3,6 +3,7 @@ import { featureSpotlight } from '../../../data/featureSpotlight.js'
 import { classNames } from '../../../utils/classNames.js'
 import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
 import Card from '../../ui/Card/Card.jsx'
+import PerspectiveGrid from '../../ui/PerspectiveGrid/PerspectiveGrid.jsx'
 import RevenueCard from '../../widgets/RevenueCard/RevenueCard.jsx'
 import StockCard from '../../widgets/StockCard/StockCard.jsx'
 
@@ -18,7 +19,7 @@ const FeatureSpotlightVisual = ({ className }) => (
     role="img"
     aria-label={visualLabel}
   >
-    <div className="feature-spotlight-visual__backdrop" />
+    <PerspectiveGrid className="feature-spotlight-visual__backdrop" scene="disc" />
     <StockCard className="feature-spotlight-visual__stocks" {...stocks} />
     <Card className="feature-spotlight-visual__badge">
       <AssetSlot
