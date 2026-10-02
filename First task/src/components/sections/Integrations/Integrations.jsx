@@ -8,7 +8,7 @@ import IntegrationsVisual from './IntegrationsVisual.jsx'
 const TITLE_ID = 'integrations-title'
 
 const Integrations = () => (
-  <section id="py-section-lg" className="py-section-lg" aria-labelledby={TITLE_ID}>
+  <section id="integrations" className="py-section-lg" aria-labelledby={TITLE_ID}>
     <Container size="compact" className="flex flex-col items-center text-center">
       <SectionHeading
         // Keeps the design's break after "easier".
