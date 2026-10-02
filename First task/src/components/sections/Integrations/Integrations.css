@@ -1,0 +1,105 @@
+.integrations {
+  padding-block: var(--section-padding-block-lg);
+}
+
+.integrations__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Keeps the design's break after "easier". */
+.integrations__heading .section-heading__title {
+  max-inline-size: 11em;
+}
+
+.integrations__highlight {
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-accent);
+}
+
+.integrations__summary {
+  max-inline-size: 37.5rem;
+  margin-block-start: 66px;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  letter-spacing: var(--letter-spacing-snug);
+  color: var(--color-text-secondary);
+}
+
+.integrations__cta {
+  margin-block-start: 40px;
+}
+
+/*
+ * The integration map scales as one: nodes are placed and sized as
+ * fractions of the 1008 x 395 design map, connectors stay 1px.
+ */
+.integrations-visual {
+  position: relative;
+  isolation: isolate;
+  inline-size: 100%;
+  max-inline-size: 63rem; /* 1008px */
+  aspect-ratio: var(--map-aspect);
+  margin-block-start: 62px;
+}
+
+.integrations-visual__connectors {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  inline-size: 100%;
+  block-size: 100%;
+  fill: none;
+  stroke: var(--color-border);
+  stroke-width: 1;
+}
+
+.integrations-visual__node,
+.integrations-visual__hub {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  background-color: var(--color-surface);
+  border-radius: 50%;
+  translate: -50% -50%;
+}
+
+/* 88px node */
+.integrations-visual__node {
+  inset-inline-start: calc(var(--x) * 100%);
+  inset-block-start: calc(var(--y) * 100%);
+  inline-size: 8.73%;
+  border: 1px solid var(--color-border-subtle);
+}
+
+/* 32px glyph */
+.integrations-visual__icon {
+  inline-size: 36.4%;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+/* 140px white disc holding a 124px outlined circle. */
+.integrations-visual__hub {
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
+  inline-size: 13.89%;
+  box-shadow: var(--shadow-floating-soft);
+}
+
+.integrations-visual__hub::after {
+  content: '';
+  position: absolute;
+  inset: 5.71%;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 50%;
+}
+
+/* 48px mark */
+.integrations-visual__hub-mark {
+  inline-size: 34.3%;
+  aspect-ratio: 19 / 14;
+}

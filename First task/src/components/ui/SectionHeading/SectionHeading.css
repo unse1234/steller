@@ -26,6 +26,10 @@
   letter-spacing: normal;
 }
 
+.section-heading--xl .section-heading__eyebrow {
+  font-size: var(--font-size-md);
+}
+
 .section-heading--xl .section-heading__title {
   margin-block-start: 15px;
   font-size: var(--font-size-display-sm);

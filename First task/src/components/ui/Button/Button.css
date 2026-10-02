@@ -60,6 +60,19 @@
   background-color: var(--color-violet-500);
 }
 
+/* Raised gradient pill, the design's emphasised call to action. */
+.button--accent {
+  color: var(--color-text-inverse);
+  background-image: var(--gradient-accent);
+  border-color: transparent;
+  box-shadow: var(--shadow-accent-pill);
+}
+
+.button--accent:hover {
+  background-color: var(--color-violet-600);
+  background-image: none;
+}
+
 .button--soft {
   color: var(--color-text-primary);
   background-color: var(--color-background-muted);

@@ -1,6 +1,7 @@
 /*
  * Asset manifest. Files are named in kebab-case after what they depict;
- * the data files decide what each one is used for.
+ * the data files decide what each one is used for. Entries set to null are
+ * still to be supplied; AssetSlot renders a placeholder for them.
  */
 
 // Brand
@@ -14,6 +15,7 @@ import phoneFrontImage from './images/mockups/phone-front.svg'
 // Icons
 import appsIcon from './images/icons/apps.svg'
 import arrowDownLeftIcon from './images/icons/arrow-down-left.svg'
+import arrowForwardIcon from './images/icons/arrow-forward.svg'
 import arrowRightIcon from './images/icons/arrow-right.svg'
 import arrowUpRightIcon from './images/icons/arrow-up-right.png'
 import bellIcon from './images/icons/bell.svg'
@@ -59,6 +61,7 @@ export const assets = {
   icons: {
     apps: appsIcon,
     arrowDownLeft: arrowDownLeftIcon,
+    arrowForward: arrowForwardIcon,
     arrowRight: arrowRightIcon,
     arrowUpRight: arrowUpRightIcon,
     bell: bellIcon,
@@ -93,5 +96,19 @@ export const assets = {
     republica: republicaLogo,
     slack: slackLogo,
     veroxFloor: veroxFloorLogo,
+  },
+  // Full-colour app marks. Slack reuses its company logo; the rest are not
+  // supplied yet.
+  brandIcons: {
+    dropbox: null,
+    facebook: null,
+    figma: null,
+    instagram: null,
+    mailchimp: null,
+    monday: null,
+    pinterest: null,
+    slack: slackLogo,
+    snapchat: null,
+    twitter: null,
   },
 }

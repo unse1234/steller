@@ -40,5 +40,5 @@ src/
 - **Content:** section copy and sample data live in `src/data`. Illustrative
   visuals are exposed to assistive technology as one image with a
   `visualLabel` summary.
-- **Missing artwork:** `AssetSlot` renders a same-sized placeholder until the
-  file is supplied.
+- **Missing artwork:** manifest entries set to `null` render as a same-sized
+  `AssetSlot` placeholder until the file is supplied.
