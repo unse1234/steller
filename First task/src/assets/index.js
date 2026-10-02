@@ -74,6 +74,12 @@ import ourStoryImage from './images/about/our-story.jpg'
 import stellarPhoneImage from './images/about/stellar-phone.png'
 import valueCustomerFocusImage from './images/about/value-customer-focus.svg'
 import valueGrowingImage from './images/about/value-growing.svg'
+import jakeWearyPortrait from './images/about/team-jake-weary.svg'
+import sadieBerlinPortrait from './images/about/team-sadie-berlin.svg'
+import dylanMeringuPortrait from './images/about/team-dylan-meringu.svg'
+import amayaLocostaPortrait from './images/about/team-amaya-locosta.svg'
+import samSmithPortrait from './images/about/team-sam-smith.svg'
+import ceciliaEvansPortrait from './images/about/team-cecilia-evans.svg'
 
 // Blog covers
 import integrationMapCover from './images/blog-covers/integration-map.svg'
@@ -153,6 +159,15 @@ export const assets = {
     stellarPhone: stellarPhoneImage,
     valueCustomerFocus: valueCustomerFocusImage,
     valueGrowing: valueGrowingImage,
+  },
+  // Team memoji portraits (About page).
+  teamPortraits: {
+    jakeWeary: jakeWearyPortrait,
+    sadieBerlin: sadieBerlinPortrait,
+    dylanMeringu: dylanMeringuPortrait,
+    amayaLocosta: amayaLocostaPortrait,
+    samSmith: samSmithPortrait,
+    ceciliaEvans: ceciliaEvansPortrait,
   },
   // Blog cover art.
   covers: {
