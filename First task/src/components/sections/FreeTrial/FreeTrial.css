@@ -37,16 +37,6 @@
   color: var(--text-color-primary);
 }
 
-.free-trial__perks .check-list__item {
-  font-size: var(--text-md);
-  letter-spacing: var(--tracking-snug);
-}
-
-.free-trial__perks .check-list__icon {
-  inline-size: 24px;
-  block-size: 24px;
-}
-
 @media (min-width: 1120px) {
   .free-trial__inner {
     grid-template-columns: minmax(0, 1fr) minmax(0, 28.8125rem); /* form: 461px */

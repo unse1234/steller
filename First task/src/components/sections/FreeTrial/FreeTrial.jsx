@@ -25,7 +25,14 @@ const FreeTrial = () => (
         className="free-trial__form"
         layout="inline"
         submitLabel="Get Instant Access"
-        note={<CheckList className="free-trial__perks" items={freeTrial.perks} />}
+        note={
+          <CheckList
+            className="free-trial__perks"
+            itemClassName="text-md tracking-snug"
+            iconClassName="size-6"
+            items={freeTrial.perks}
+          />
+        }
         successMessage="Thanks! Check your inbox to start your free trial."
       />
     </Container>
