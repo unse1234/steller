@@ -1,6 +1,5 @@
 import { useId } from 'react'
 import { classNames } from '../../../utils/classNames.js'
-import './PerspectiveGrid.css'
 
 /*
  * One receding grid plane, measured from the design. Rows sit at distance
@@ -62,6 +61,19 @@ const SCENES = {
   },
 }
 
+/* Pinned art spans the full width at the scene's own proportions (set
+   inline), cropped by its box. */
+const PINS = {
+  top: 'absolute inset-x-0 top-0 h-auto',
+  bottom: 'absolute inset-x-0 bottom-0 h-auto',
+}
+
+/* Band: each half of the box shows one edge of the grid. */
+const HALVES = {
+  ceiling: 'absolute inset-x-0 top-0 h-1/2 overflow-hidden',
+  floor: 'absolute inset-x-0 bottom-0 h-1/2 overflow-hidden',
+}
+
 const round = (value) => Math.round(value * 100) / 100
 
 /** Path data for a plane's rows and columns, from the frame edge to its fade. */
@@ -119,7 +131,7 @@ const GridArt = ({ id, scene, pin }) => {
 
   return (
     <svg
-      className={classNames('perspective-grid__art', pin && `perspective-grid__art--${pin}`)}
+      className={classNames('block h-full w-full', PINS[pin])}
       style={pin ? { aspectRatio: `${width} / ${height}` } : undefined}
       viewBox={`0 0 ${width} ${height}`}
       preserveAspectRatio={pin ? 'xMidYMid meet' : 'xMidYMid slice'}
@@ -167,13 +179,13 @@ const GridArt = ({ id, scene, pin }) => {
  */
 const PerspectiveGrid = ({ scene = 'hero', className }) => {
   const id = useId()
-  const rootClassName = classNames('perspective-grid', `perspective-grid--${scene}`, className)
+  const rootClassName = classNames('pointer-events-none relative overflow-hidden text-gray-200', className)
 
   if (scene === 'band') {
     return (
       <div className={rootClassName} aria-hidden="true">
         {['ceiling', 'floor'].map((edge) => (
-          <div key={edge} className={`perspective-grid__half perspective-grid__half--${edge}`}>
+          <div key={edge} className={HALVES[edge]}>
             <GridArt id={`${id}-${edge}`} scene={edge} pin={edge === 'ceiling' ? 'top' : 'bottom'} />
           </div>
         ))}
