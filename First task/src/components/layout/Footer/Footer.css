@@ -82,9 +82,10 @@
   border-color: var(--color-violet-300);
 }
 
+/* Glyph artwork is cropped to its bounds: 15px across, as in the design. */
 .footer__social-icon {
-  inline-size: 16px;
-  block-size: 16px;
+  inline-size: 15px;
+  block-size: 15px;
   object-fit: contain;
 }
 
