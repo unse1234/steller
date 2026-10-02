@@ -2,8 +2,8 @@ import { assets } from '../../../assets/index.js'
 import { featureSpotlight } from '../../../data/featureSpotlight.js'
 import { accountLinks } from '../../../data/navigation.js'
 import SplitSection from '../../layout/SplitSection/SplitSection.jsx'
-import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
 import Button from '../../ui/Button/Button.jsx'
+import ButtonIcon from '../../ui/Button/ButtonIcon.jsx'
 import CheckList from '../../ui/CheckList/CheckList.jsx'
 import SectionHeading from '../../ui/SectionHeading/SectionHeading.jsx'
 import FeatureSpotlightVisual from './FeatureSpotlightVisual.jsx'
@@ -25,7 +25,7 @@ const FeatureSpotlight = () => (
         <CheckList className="feature-spotlight__features" items={featureSpotlight.features} />
         <Button className="feature-spotlight__cta" href={accountLinks.signUp.href} size="lg">
           Get Free Trial
-          <AssetSlot className="button__icon" src={assets.icons.arrowRight} name="arrow-icon" />
+          <ButtonIcon src={assets.icons.arrowRight} name="arrow-icon" />
         </Button>
       </>
     }

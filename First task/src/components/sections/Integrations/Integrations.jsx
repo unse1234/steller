@@ -1,7 +1,7 @@
 import { assets } from '../../../assets/index.js'
 import Container from '../../layout/Container/Container.jsx'
-import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
 import Button from '../../ui/Button/Button.jsx'
+import ButtonIcon from '../../ui/Button/ButtonIcon.jsx'
 import SectionHeading from '../../ui/SectionHeading/SectionHeading.jsx'
 import IntegrationsVisual from './IntegrationsVisual.jsx'
 import './Integrations.css'
@@ -34,7 +34,7 @@ const Integrations = () => (
 
       <Button className="integrations__cta" href="#integrations" variant="accent">
         See Integrations
-        <AssetSlot className="button__icon" src={assets.icons.arrowForward} name="arrow-icon" />
+        <ButtonIcon src={assets.icons.arrowForward} name="arrow-icon" />
       </Button>
     </Container>
   </section>

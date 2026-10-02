@@ -1,6 +1,7 @@
 import { assets } from '../../../assets/index.js'
 import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
 import Button from '../../ui/Button/Button.jsx'
+import ButtonIcon from '../../ui/Button/ButtonIcon.jsx'
 
 /** Article teaser: framed cover, tags, title, excerpt and a read-more link. */
 const BlogCard = ({ title, excerpt, href, tags, cover, coverLabel }) => (
@@ -19,7 +20,7 @@ const BlogCard = ({ title, excerpt, href, tags, cover, coverLabel }) => (
     <p className="blog-card__excerpt">{excerpt}</p>
     <Button className="blog-card__cta" href={href}>
       Read More<span className="sr-only">: {title}</span>
-      <AssetSlot className="button__icon" src={assets.icons.arrowRight} name="arrow-icon" />
+      <ButtonIcon src={assets.icons.arrowRight} name="arrow-icon" />
     </Button>
   </article>
 )
