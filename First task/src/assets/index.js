@@ -1,7 +1,7 @@
 /*
  * Asset manifest. Files are named in kebab-case after what they depict;
- * the data files decide what each one is used for. Entries set to null are
- * still to be supplied; AssetSlot renders a placeholder for them.
+ * the data files decide what each one is used for. An entry set to null
+ * renders as an AssetSlot placeholder until its file is supplied.
  */
 
 // Brand
@@ -42,6 +42,14 @@ import attendeeOneAvatar from './images/avatars/attendee-1.svg'
 import attendeeTwoAvatar from './images/avatars/attendee-2.svg'
 import attendeeThreeAvatar from './images/avatars/attendee-3.svg'
 import sarahSmithAvatar from './images/avatars/sarah-smith.svg'
+import amayaLocostaAvatar from './images/avatars/amaya-locosta.svg'
+import figNelsonAvatar from './images/avatars/fig-nelson.svg'
+import sadieBerlinAvatar from './images/avatars/sadie-berlin.svg'
+
+// Social glyphs (footer)
+import facebookGlyph from './images/social-glyphs/facebook.svg'
+import instagramGlyph from './images/social-glyphs/instagram.svg'
+import twitterGlyph from './images/social-glyphs/twitter.svg'
 
 // Company logos
 import amplitudeLogo from './images/company-logos/amplitude.svg'
@@ -50,6 +58,20 @@ import pengLogo from './images/company-logos/peng.svg'
 import republicaLogo from './images/company-logos/republica.png'
 import slackLogo from './images/company-logos/slack.svg'
 import veroxFloorLogo from './images/company-logos/verox-floor.svg'
+import facebookLogo from './images/company-logos/facebook.svg'
+import figmaLogo from './images/company-logos/figma.svg'
+import instagramLogo from './images/company-logos/instagram.svg'
+import mailchimpLogo from './images/company-logos/mailchimp.svg'
+import mondayLogo from './images/company-logos/monday.svg'
+import pinterestLogo from './images/company-logos/pinterest.svg'
+import snapchatLogo from './images/company-logos/snapchat.svg'
+import twitterLogo from './images/company-logos/twitter.svg'
+import dropboxLogo from './images/company-logos/dropbox.svg'
+
+// Blog covers
+import integrationMapCover from './images/blog-covers/integration-map.svg'
+import stellarDevicesCover from './images/blog-covers/stellar-devices.svg'
+import stellarPhonesCover from './images/blog-covers/stellar-phones.svg'
 
 export const assets = {
   logoMark: logoMarkImage,
@@ -82,20 +104,19 @@ export const assets = {
     moreVertical: moreVerticalIcon,
     pieChart: pieChartIcon,
     siren: sirenIcon,
-    // Violet social glyphs (footer); not supplied yet.
-    facebook: null,
-    instagram: null,
-    twitter: null,
+    // Violet social glyphs (footer).
+    facebook: facebookGlyph,
+    instagram: instagramGlyph,
+    twitter: twitterGlyph,
   },
   avatars: {
     attendeeOne: attendeeOneAvatar,
     attendeeTwo: attendeeTwoAvatar,
     attendeeThree: attendeeThreeAvatar,
     sarahSmith: sarahSmithAvatar,
-    // Not supplied yet.
-    amayaLocosta: null,
-    figNelson: null,
-    sadieBerlin: null,
+    amayaLocosta: amayaLocostaAvatar,
+    figNelson: figNelsonAvatar,
+    sadieBerlin: sadieBerlinAvatar,
   },
   companyLogos: {
     amplitude: amplitudeLogo,
@@ -105,24 +126,23 @@ export const assets = {
     slack: slackLogo,
     veroxFloor: veroxFloorLogo,
   },
-  // Full-colour app marks. Slack reuses its company logo; the rest are not
-  // supplied yet.
+  // Full-colour app marks; Slack reuses its company logo.
   brandIcons: {
-    dropbox: null,
-    facebook: null,
-    figma: null,
-    instagram: null,
-    mailchimp: null,
-    monday: null,
-    pinterest: null,
+    dropbox: dropboxLogo,
+    facebook: facebookLogo,
+    figma: figmaLogo,
+    instagram: instagramLogo,
+    mailchimp: mailchimpLogo,
+    monday: mondayLogo,
+    pinterest: pinterestLogo,
     slack: slackLogo,
-    snapchat: null,
-    twitter: null,
+    snapchat: snapchatLogo,
+    twitter: twitterLogo,
   },
-  // Blog cover art, not supplied yet.
+  // Blog cover art.
   covers: {
-    integrationMap: null,
-    stellarDevices: null,
-    stellarPhones: null,
+    integrationMap: integrationMapCover,
+    stellarDevices: stellarDevicesCover,
+    stellarPhones: stellarPhonesCover,
   },
 }
