@@ -71,6 +71,8 @@ import dropboxLogo from './images/company-logos/dropbox.svg'
 // About page artwork
 import globeImage from './images/about/globe.png'
 import ourStoryImage from './images/about/our-story.jpg'
+import valueCustomerFocusImage from './images/about/value-customer-focus.svg'
+import valueGrowingImage from './images/about/value-growing.svg'
 
 // Blog covers
 import integrationMapCover from './images/blog-covers/integration-map.svg'
@@ -147,6 +149,8 @@ export const assets = {
   about: {
     globe: globeImage,
     ourStory: ourStoryImage,
+    valueCustomerFocus: valueCustomerFocusImage,
+    valueGrowing: valueGrowingImage,
   },
   // Blog cover art.
   covers: {
