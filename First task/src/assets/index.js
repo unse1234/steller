@@ -115,4 +115,10 @@ export const assets = {
     snapchat: null,
     twitter: null,
   },
+  // Blog cover art, not supplied yet.
+  covers: {
+    integrationMap: null,
+    stellarDevices: null,
+    stellarPhones: null,
+  },
 }

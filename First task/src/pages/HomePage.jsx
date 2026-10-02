@@ -1,3 +1,4 @@
+import Blog from '../components/sections/Blog/Blog.jsx'
 import FeatureShowcase from '../components/sections/FeatureShowcase/FeatureShowcase.jsx'
 import FeatureSpotlight from '../components/sections/FeatureSpotlight/FeatureSpotlight.jsx'
 import GetStarted from '../components/sections/GetStarted/GetStarted.jsx'
@@ -17,6 +18,7 @@ const HomePage = () => (
     <KeyFeatures />
     <Integrations />
     <Testimonials />
+    <Blog />
   </>
 )
 
