@@ -6,6 +6,11 @@ import { extendTailwindMerge } from 'tailwind-merge'
  * be dropped next to a real colour utility.
  */
 const mergeClasses = extendTailwindMerge({
+  override: {
+    // The theme's font sizes set no line height, so `text-*` must not
+    // discard an earlier `leading-*`.
+    conflictingClassGroups: { 'font-size': [] },
+  },
   extend: {
     theme: {
       text: ['md-plus', 'display-sm', 'display-md', 'display-lg', 'display-xl'],
