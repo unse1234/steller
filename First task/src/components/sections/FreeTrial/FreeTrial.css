@@ -18,18 +18,6 @@
   gap: calc(var(--spacing) * 10) calc(var(--spacing) * 8);
 }
 
-.free-trial__heading .section-heading__description {
-  margin-block-start: calc(var(--spacing) * 3);
-  font-size: var(--text-base);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--leading-normal);
-}
-
-.free-trial__heading .section-heading__title,
-.free-trial__heading .section-heading__description {
-  letter-spacing: var(--tracking-snug);
-}
-
 .free-trial__perks {
   display: flex;
   flex-wrap: wrap;

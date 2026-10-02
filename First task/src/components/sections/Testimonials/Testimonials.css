@@ -29,11 +29,6 @@
   pointer-events: none;
 }
 
-/* Keeps the design's break after "our". */
-.testimonials__heading .section-heading__title {
-  max-inline-size: 9.6em;
-}
-
 /* Masonry wall: cards flow down each column in turn. */
 .testimonials__wall {
   position: relative;

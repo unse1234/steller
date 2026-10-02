@@ -14,7 +14,8 @@ const Testimonials = () => (
 
     <Container size="compact">
       <SectionHeading
-        className="testimonials__heading"
+        // Keeps the design's break after "our".
+        titleClassName="max-w-[9.6em]"
         size="3xl"
         align="center"
         eyebrow="Our Customers"

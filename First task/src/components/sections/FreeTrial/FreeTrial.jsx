@@ -14,7 +14,8 @@ const FreeTrial = () => (
 
     <Container size="medium" className="free-trial__inner">
       <SectionHeading
-        className="free-trial__heading"
+        titleClassName="tracking-snug"
+        descriptionClassName="mt-3 text-base leading-normal font-regular tracking-snug"
         size="xl"
         eyebrow="Start building today!"
         title="Start your 7-day free trial"

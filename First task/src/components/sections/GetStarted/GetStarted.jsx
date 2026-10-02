@@ -14,7 +14,8 @@ const GetStarted = () => (
     content={
       <>
         <SectionHeading
-          className="get-started__heading"
+          // Keeps the design's break after "Stellar".
+          titleClassName="max-w-[10em]"
           size="lg"
           eyebrow="Get Started"
           title="Start your Stellar journey here."

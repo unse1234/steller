@@ -22,7 +22,8 @@ const FeatureShowcase = () => (
 
     <Container>
       <SectionHeading
-        className="feature-showcase__heading"
+        // Keeps the design's break after "has".
+        titleClassName="max-w-[9.5em]"
         size="2xl"
         align="center"
         eyebrow="Powerful Features"

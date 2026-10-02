@@ -13,11 +13,6 @@
   z-index: -1;
 }
 
-/* Keeps the design's break after "has". */
-.feature-showcase__heading .section-heading__title {
-  max-inline-size: 9.5em;
-}
-
 /* Sized in em so the pill scales with the fluid heading (85px at 58px). The
    negative margin keeps it from stretching its line. */
 .feature-showcase__highlight {

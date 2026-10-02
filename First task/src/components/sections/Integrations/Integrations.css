@@ -9,11 +9,6 @@
   text-align: center;
 }
 
-/* Keeps the design's break after "easier". */
-.integrations__heading .section-heading__title {
-  max-inline-size: 11em;
-}
-
 .integrations__highlight {
   font-weight: var(--font-weight-regular);
   color: var(--text-color-accent);

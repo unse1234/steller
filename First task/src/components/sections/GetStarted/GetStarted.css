@@ -15,11 +15,6 @@
   }
 }
 
-/* Keeps the design's break after "Stellar". */
-.get-started__heading .section-heading__title {
-  max-inline-size: 10em;
-}
-
 .get-started__form {
   margin-block-start: 30px;
 }

@@ -12,7 +12,8 @@ const Integrations = () => (
   <section id="integrations" className="integrations" aria-labelledby={TITLE_ID}>
     <Container size="compact" className="integrations__inner">
       <SectionHeading
-        className="integrations__heading"
+        // Keeps the design's break after "easier".
+        titleClassName="max-w-[11em]"
         size="xl"
         align="center"
         eyebrow="Our Primary Integrations"
