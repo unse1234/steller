@@ -149,7 +149,8 @@
   --transition-duration-medium: 350ms;
   --ease-standard: cubic-bezier(0.2, 0, 0, 1);
 
-  --animate-logo-ticker: logo-ticker-scroll var(--logo-ticker-duration) linear infinite;
+  /* The logo ticker; its keyframes read the start offset from the track. */
+  --animate-logo-ticker: logo-ticker-scroll 32s linear infinite;
 
   @keyframes logo-ticker-scroll {
     to {
