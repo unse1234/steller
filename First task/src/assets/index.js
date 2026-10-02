@@ -71,6 +71,7 @@ import dropboxLogo from './images/company-logos/dropbox.svg'
 // About page artwork
 import globeImage from './images/about/globe.png'
 import ourStoryImage from './images/about/our-story.jpg'
+import stellarPhoneImage from './images/about/stellar-phone.png'
 import valueCustomerFocusImage from './images/about/value-customer-focus.svg'
 import valueGrowingImage from './images/about/value-growing.svg'
 
@@ -149,6 +150,7 @@ export const assets = {
   about: {
     globe: globeImage,
     ourStory: ourStoryImage,
+    stellarPhone: stellarPhoneImage,
     valueCustomerFocus: valueCustomerFocusImage,
     valueGrowing: valueGrowingImage,
   },
