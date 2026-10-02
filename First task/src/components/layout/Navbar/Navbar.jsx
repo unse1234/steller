@@ -97,7 +97,7 @@ const Navbar = () => {
             <ul className="desktop:flex desktop:gap-[clamp(24px,3.33vw,48px)]">
               {primaryNavigation.map(({ label, href }) => (
                 <li key={href}>
-                  <a className={LINK} href={href} onClick={closeMenu}>
+                  <a className={LINK} href={href} onClick={closeMenu} aria-current={href === (window.location.pathname.replace(/\/$/, '') || '/') ? 'page' : undefined}>
                     {label}
                   </a>
                 </li>

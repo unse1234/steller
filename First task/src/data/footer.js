@@ -10,22 +10,22 @@ export const footerColumns = [
     title: 'Stellar Page',
     links: [
       { label: 'Home', href: '/' },
-      { label: 'About', href: '#about' },
-      { label: 'Pricing', href: '#pricing' },
+      { label: 'About', href: '/about' },
+      { label: 'Pricing', href: '/#pricing' },
     ],
   },
   {
     title: 'Product',
     links: [
-      { label: 'Contact', href: '#contact' },
-      { label: 'Blog', href: '#blog' },
-      { label: 'Product', href: '#product' },
+      { label: 'Contact', href: '/#contact' },
+      { label: 'Blog', href: '/#blog' },
+      { label: 'Product', href: '/#product' },
     ],
   },
   {
     title: 'Resources',
     links: [
-      { label: 'Integration', href: '#integrations' },
+      { label: 'Integration', href: '/#integrations' },
       { label: 'Integration Detail', href: '/integrations/detail' },
       { label: 'Sign Up', href: accountLinks.signUp.href },
     ],

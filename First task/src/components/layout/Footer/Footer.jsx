@@ -3,7 +3,7 @@ import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
 import Logo from '../../ui/Logo/Logo.jsx'
 import Container from '../Container/Container.jsx'
 
-const CURRENT_PATH = '/'
+const CURRENT_PATH = window.location.pathname.replace(/\/$/, '') || '/'
 
 const Footer = () => (
   <footer className="pt-28.5 pb-12">
@@ -42,7 +42,7 @@ const Footer = () => (
 
       <div className="mt-20 flex flex-wrap items-center justify-between gap-6 border-t border-t-border-subtle pt-12">
         <p className="text-xs text-secondary">{copyright}</p>
-        <ul className="flex gap-3">
+        <ul id="social" className="flex scroll-mt-32 gap-3">
           {socialLinks.map(({ name, href, icon }) => (
             <li key={name}>
               <a
