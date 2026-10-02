@@ -13,7 +13,7 @@ const mergeClasses = extendTailwindMerge({
   },
   extend: {
     theme: {
-      text: ['md-plus', 'display-sm', 'display-md', 'display-lg', 'display-xl'],
+      text: ['md-plus', 'display-sm', 'display-md', 'display-lg', 'display-xl', 'display-xl-plus'],
       'font-weight': ['regular'],
       tracking: ['snug', 'snugger'],
       leading: ['comfortable'],

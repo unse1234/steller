@@ -43,6 +43,7 @@
   --text-display-md: clamp(2rem, 1.472rem + 2.254vw, 3.5rem); /* 32px → 56px */
   --text-display-lg: clamp(2.25rem, 1.678rem + 2.441vw, 3.875rem); /* 36px → 62px */
   --text-display-xl: clamp(2.25rem, 1.766rem + 2.066vw, 3.625rem); /* 36px → 58px */
+  --text-display-xl-plus: clamp(2.25rem, 1.75rem + 2.17vw, 3.6875rem); /* 36px → 59px */
 
   /* Inter Display: the font's large optical size, used for headline type
      (the `opsz-display` utility). */
@@ -76,6 +77,9 @@
   --color-violet-500: #775be2;
   --color-violet-600: #6f52e0;
   --color-violet-700: #5a3dd1;
+  --color-indigo-300: #98a5fa;
+  --color-indigo-500: #796ff9;
+  --color-pink-300: #eea6ec;
 
   /* Semantic colors ------------------------------------------------------- */
   /* Text colors only apply to `text-*` (`text-muted`, not `text-text-muted`). */

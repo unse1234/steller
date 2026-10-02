@@ -68,6 +68,9 @@ import snapchatLogo from './images/company-logos/snapchat.svg'
 import twitterLogo from './images/company-logos/twitter.svg'
 import dropboxLogo from './images/company-logos/dropbox.svg'
 
+// About page artwork
+import globeImage from './images/about/globe.png'
+
 // Blog covers
 import integrationMapCover from './images/blog-covers/integration-map.svg'
 import stellarDevicesCover from './images/blog-covers/stellar-devices.svg'
@@ -138,6 +141,10 @@ export const assets = {
     slack: slackLogo,
     snapchat: snapchatLogo,
     twitter: twitterLogo,
+  },
+  // About page photographs and artwork.
+  about: {
+    globe: globeImage,
   },
   // Blog cover art.
   covers: {
