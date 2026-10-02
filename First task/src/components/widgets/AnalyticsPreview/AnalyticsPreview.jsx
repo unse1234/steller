@@ -9,7 +9,14 @@ const AnalyticsPreview = ({ title, rows, className }) => (
       {rows.map(({ label, value }) => (
         <li key={label} className="analytics-preview__row">
           <span className="analytics-preview__label">{label}</span>
-          <ProgressBar className="analytics-preview__bar" value={value} showTrack />
+          <ProgressBar
+            className="analytics-preview__bar"
+            // Bars end square, as in the product's share charts.
+            fillClassName="rounded-e-none"
+            labelClassName="w-6"
+            value={value}
+            showTrack
+          />
         </li>
       ))}
       <li className="analytics-preview__row" aria-hidden="true" />

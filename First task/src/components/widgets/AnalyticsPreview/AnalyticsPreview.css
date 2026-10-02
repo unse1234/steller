@@ -24,13 +24,3 @@
   font-weight: var(--font-weight-regular);
   color: var(--text-color-primary);
 }
-
-.analytics-preview__bar .progress-bar__label {
-  inline-size: 24px;
-}
-
-/* Bars end square, as in the product's share charts. */
-.analytics-preview__bar .progress-bar__fill {
-  border-start-end-radius: 0;
-  border-end-end-radius: 0;
-}
