@@ -38,7 +38,7 @@ const Navbar = () => {
     <header className="navbar">
       <Container>
         <nav ref={barRef} className="navbar__bar" aria-label="Primary">
-          <Logo href="/" />
+          <Logo className="justify-self-start desktop:ms-1" href="/" />
 
           <button
             ref={toggleRef}

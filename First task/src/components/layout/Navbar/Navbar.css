@@ -31,10 +31,6 @@
   pointer-events: auto;
 }
 
-.navbar__bar > .logo {
-  justify-self: start;
-}
-
 .navbar__link {
   font-size: var(--text-md);
   color: var(--text-color-primary);
@@ -174,11 +170,6 @@
     /* Bar radius − button radius: the CTA nests concentrically in the bar's
        rounded end. Symmetric so the centre column sits on the bar's centre. */
     padding-inline: 23px;
-  }
-
-  /* Optical inset: the flat-sided logo needs more room than the round CTA. */
-  .navbar__bar > .logo {
-    margin-inline-start: 4px;
   }
 
   .navbar__toggle {

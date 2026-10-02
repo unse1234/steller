@@ -1,7 +1,6 @@
 import { assets } from '../../../assets/index.js'
 import { classNames } from '../../../utils/classNames.js'
 import AssetSlot from '../AssetSlot/AssetSlot.jsx'
-import './Logo.css'
 
 /** Stellar logo: cloud mark beside the wordmark, both scaled by font size. */
 const Logo = ({ href, className }) => {
@@ -9,9 +8,15 @@ const Logo = ({ href, className }) => {
   const linkProps = href ? { href, 'aria-label': 'Stellar home' } : {}
 
   return (
-    <Element className={classNames('logo', className)} {...linkProps}>
-      <AssetSlot className="logo__mark" src={assets.logoMark} name="logo-mark" />
-      <span className="logo__wordmark">Stellar</span>
+    <Element
+      className={classNames(
+        'inline-flex items-center gap-[0.3em] text-xl leading-none font-bold tracking-tight text-primary no-underline',
+        className,
+      )}
+      {...linkProps}
+    >
+      <AssetSlot className="aspect-19/14 w-[1em]" src={assets.logoMark} name="logo-mark" />
+      <span>Stellar</span>
     </Element>
   )
 }
