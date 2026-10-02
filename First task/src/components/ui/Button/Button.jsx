@@ -6,17 +6,17 @@ import { classNames } from '../../../utils/classNames.js'
  * gap. On the way in, the label changes colour just behind the sweep.
  */
 const BASE =
-  'inline-flex h-[42px] cursor-pointer items-center justify-center gap-3 rounded-pill border border-transparent px-4 text-md leading-none font-regular whitespace-nowrap no-underline ' +
-  'bg-[image:linear-gradient(var(--button-fill),var(--button-fill))] bg-size-[0%_100%] bg-left bg-no-repeat bg-origin-border ' +
+  'inline-flex h-10.5 cursor-pointer items-center justify-center gap-3 rounded-pill border border-transparent px-4 text-md leading-none font-regular whitespace-nowrap no-underline ' +
+  'bg-[linear-gradient(var(--button-fill),var(--button-fill))] bg-size-[0%_100%] bg-left bg-no-repeat bg-origin-border ' +
   'transition-[background-size,color,border-color] duration-medium ease-standard'
 
 const INTERACTIVE =
   'hover:bg-size-[100%_100%] hover:delay-[0s,80ms,0s] focus-visible:bg-size-[100%_100%] focus-visible:delay-[0s,80ms,0s]'
 
 const SIZES = {
-  sm: 'h-[34px] px-3 text-2xs font-medium',
+  sm: 'h-8.5 px-3 text-2xs font-medium',
   md: '',
-  lg: 'h-12 px-[18px] text-sm font-medium',
+  lg: 'h-12 px-4.5 text-sm font-medium',
 }
 
 const VARIANTS = {
@@ -35,7 +35,7 @@ const VARIANTS = {
   accent: {
     base:
       'border-transparent text-inverse shadow-accent-button [--button-fill:var(--color-violet-700)] ' +
-      'bg-[image:linear-gradient(var(--button-fill),var(--button-fill)),var(--background-image-gradient-accent)] bg-size-[0%_100%,100%_100%]',
+      'bg-[linear-gradient(var(--button-fill),var(--button-fill)),var(--background-image-gradient-accent)] bg-size-[0%_100%,100%_100%]',
     interactive: 'hover:bg-size-[100%_100%,100%_100%] focus-visible:bg-size-[100%_100%,100%_100%]',
   },
   soft: {
