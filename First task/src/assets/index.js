@@ -69,9 +69,9 @@ import twitterLogo from './images/company-logos/twitter.svg'
 import dropboxLogo from './images/company-logos/dropbox.svg'
 
 // About page artwork
-import globeImage from './images/about/globe.png'
-import ourStoryImage from './images/about/our-story.jpg'
-import stellarPhoneImage from './images/about/stellar-phone.png'
+import globeImage from './images/about/globe.svg'
+import ourStoryImage from './images/about/our-story.svg'
+import stellarPhoneImage from './images/about/stellar-phone.svg'
 import valueCustomerFocusImage from './images/about/value-customer-focus.svg'
 import valueGrowingImage from './images/about/value-growing.svg'
 import jakeWearyPortrait from './images/about/team-jake-weary.svg'
