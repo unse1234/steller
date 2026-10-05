@@ -3,6 +3,7 @@ import { accountLinks, primaryNavigation } from '../../../data/navigation.js'
 import Button from '../../ui/Button/Button.jsx'
 import Logo from '../../ui/Logo/Logo.jsx'
 import Container from '../Container/Container.jsx'
+import { usePathname } from '../../../utils/router.js'
 
 /*
  * Floating, fixed navigation bar. Below the desktop breakpoint the links and
@@ -48,6 +49,7 @@ const TOGGLE_ICON = [
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
   const menuId = useId()
   const barRef = useRef(null)
   const toggleRef = useRef(null)
@@ -97,7 +99,7 @@ const Navbar = () => {
             <ul className="desktop:flex desktop:gap-[clamp(24px,3.33vw,48px)]">
               {primaryNavigation.map(({ label, href }) => (
                 <li key={href}>
-                  <a className={LINK} href={href} onClick={closeMenu} aria-current={href === (window.location.pathname.replace(/\/$/, '') || '/') ? 'page' : undefined}>
+                  <a className={LINK} href={href} onClick={closeMenu} aria-current={href === pathname ? 'page' : undefined}>
                     {label}
                   </a>
                 </li>
