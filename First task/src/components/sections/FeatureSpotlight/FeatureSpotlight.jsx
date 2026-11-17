@@ -12,6 +12,7 @@ const TITLE_ID = 'feature-spotlight-title'
 
 const FeatureSpotlight = () => (
   <SplitSection
+    id="product"
     labelledBy={TITLE_ID}
     content={
       <>
@@ -19,11 +20,11 @@ const FeatureSpotlight = () => (
           eyebrow="Meet Stellar"
           title="Provide powerful solutions at all times"
           titleId={TITLE_ID}
-          description="Stellar is more than just a SaaS and technology template—it's a complete digital transformation solution."
+          description="A dashboard concept that brings charts, summaries and everyday workflows into one clear interface. All figures shown are sample data."
         />
         <CheckList className="mt-7.25" items={featureSpotlight.features} />
         <Button className="mt-11" href={accountLinks.signUp.href} size="lg">
-          Get Free Trial
+          Discuss your project
           <ButtonIcon src={assets.icons.arrowRight} name="arrow-icon" />
         </Button>
       </>

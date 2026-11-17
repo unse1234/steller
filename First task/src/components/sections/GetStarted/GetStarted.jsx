@@ -16,16 +16,16 @@ const GetStarted = () => (
           // Keeps the design's break after "Stellar".
           titleClassName="max-w-[10em]"
           size="lg"
-          eyebrow="Get Started"
-          title="Start your Stellar journey here."
+          eyebrow="Interactive preview"
+          title="Try the demo form."
           titleId={TITLE_ID}
-          description="Unlock the power of data analytics and gain actionable insights to make informed business decisions."
+          description="Explore the email validation and confirmation states using a sample address. This portfolio demo does not create accounts."
         />
         <NewsletterForm
           className="mt-7.5"
-          submitLabel="Subscribe"
-          note="14 day trial – No credit card required"
-          successMessage="Thanks! Check your inbox to confirm your subscription."
+          submitLabel="Try demo form"
+          note="Demo only. Email addresses are not sent or stored."
+          successMessage="Demo complete. No email was sent, no address was saved, and no account was created."
         />
       </>
     }

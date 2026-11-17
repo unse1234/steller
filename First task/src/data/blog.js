@@ -1,33 +1,7 @@
 import { assets } from '../assets/index.js'
-
 const { covers } = assets
-
 export const blogPosts = [
-  {
-    title: 'The Art of Designing Timeless Masterpieces',
-    excerpt:
-      'Dive into the realm of limitless creativity as we explore the techniques and inspirations behind crafting visually stunning and timeless designs that captivate hearts and minds.',
-    href: '/blog/the-art-of-designing-timeless-masterpieces',
-    tags: ['Slate', 'Contrux'],
-    cover: covers.stellarDevices,
-    coverLabel: 'The Stellar website on a desktop screen and a phone.',
-  },
-  {
-    title: 'Stay Ahead of the Curve in the Visual World',
-    excerpt:
-      'Discover the secrets of designing impactful brand experiences that leave a lasting impression on your audience, forging deep connections and driving brand loyalty.',
-    href: '/blog/stay-ahead-of-the-curve-in-the-visual-world',
-    tags: ['Slate', 'Contrux'],
-    cover: covers.integrationMap,
-    coverLabel: 'Stellar connected to Twitter and Facebook.',
-  },
-  {
-    title: 'Crafting Emotionally Engaging User Experiences',
-    excerpt:
-      "Join us on a journey of exploration as we push the boundaries of design, unveiling cutting-edge concepts and techniques that challenge conventional norms and redefine what's possible.",
-    href: '/blog/crafting-emotionally-engaging-user-experiences',
-    tags: ['Slate', 'Contrux'],
-    cover: covers.stellarPhones,
-    coverLabel: 'Two phones showing the Stellar app.',
-  },
+  { id: 'responsive-layouts', title: 'A layout that fits the screen', excerpt: 'A closer look at the choices behind a responsive landing page, from stacked cards to spacious desktop layouts.', tags: ['Layout', 'Responsive design'], cover: covers.stellarDevices, coverLabel: 'The Stellar website on a desktop screen and a phone.', paragraphs: ['A small screen needs a clear reading order and comfortable space around controls. Wider screens give cards and sections room to sit beside one another.', 'For this build, layouts are checked at phone, tablet and desktop widths. Navigation, long text and forms need the same attention as the main headline.'] },
+  { id: 'reusable-sections', title: 'Consistency across every section', excerpt: 'Shared buttons, cards and typography make a multi-page interface feel like one connected experience.', tags: ['React', 'Components'], cover: covers.integrationMap, coverLabel: 'An illustrative diagram connecting Stellar to other tools.', paragraphs: ['Repeated elements share the same spacing, colour and interaction rules. A single button component can support the main call to action and a quieter secondary link.', 'Section copy lives separately from the layout so a future project can use its own content without rebuilding every visual component.'] },
+  { id: 'clear-interactions', title: 'Make the next action clear', excerpt: 'Working links, readable form feedback and clear demo labels help visitors understand what they can do.', tags: ['Interaction', 'Clarity'], cover: covers.stellarPhones, coverLabel: 'Two phones showing the Stellar concept interface.', paragraphs: ['A portfolio concept should clearly separate simulated product features from real ways to contact the developer. This site labels its fictional content and keeps project enquiries in a separate contact section.', 'The sample email form demonstrates validation and confirmation locally. It does not subscribe visitors or send their address anywhere.'] },
 ]

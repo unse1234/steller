@@ -1,12 +1,14 @@
+import { developer } from './developer.js'
+
 export const primaryNavigation = [
   { label: 'Product', href: '/#product' },
   { label: 'About', href: '/about' },
-  { label: 'Pricing', href: '/#pricing' },
+  { label: 'Work with me', href: '/#pricing' },
   { label: 'Contact', href: '/#contact' },
-  { label: 'Blog', href: '/#blog' },
+  { label: 'Notes', href: '/#blog' },
 ]
 
 export const accountLinks = {
-  signIn: { label: 'Sign in', href: '/sign-in' },
-  signUp: { label: 'Sign up for free', href: '/sign-up' },
+  signIn: { label: 'About this demo', href: '/about' },
+  signUp: { label: 'Hire M.Unse', href: developer.emailHref },
 }

@@ -1,4 +1,3 @@
-import { accountLinks } from '../../../data/navigation.js'
 import { trustedCompanies } from '../../../data/trustedCompanies.js'
 import Container from '../../layout/Container/Container.jsx'
 import Button from '../../ui/Button/Button.jsx'
@@ -14,19 +13,19 @@ const TrustedBy = () => (
     {/* Wide screens scale to the design's 1216px measure. */}
     <Container className="flex flex-col items-center text-center wide:zoom-(--scale-narrow-to-medium)">
       <h2 id={TITLE_ID} className={TITLE}>
-        The world&apos;s best companies trust Stellar.
+        A connected workspace for modern teams.
       </h2>
       {/* The ticker is clipped to a narrower measure than the page container. */}
       <LogoTicker
         className="my-13.5 w-full max-w-narrow max-tablet:my-10"
         items={trustedCompanies}
-        label="Companies that use Stellar"
+        label="Illustrative brand logos from the concept design"
       />
       <p className={SUMMARY}>
-        Stellar is used by over 55,000+ companies across the globe
+        Illustrative logos from the original design. No customer relationship or endorsement is claimed.
       </p>
-      <Button className="mt-10 max-tablet:mt-8" href={accountLinks.signUp.href} size="lg">
-        Start your Stellar Journey
+      <Button className="mt-10 max-tablet:mt-8" href="/#product" size="lg">
+        Explore the concept
       </Button>
     </Container>
   </section>

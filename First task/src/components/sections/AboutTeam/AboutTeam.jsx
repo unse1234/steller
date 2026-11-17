@@ -22,15 +22,15 @@ const AboutTeam = () => (
     <Container size="medium">
       <div className="flex flex-col justify-between gap-5 desktop:flex-row desktop:items-end desktop:gap-20">
         <SectionHeading
-          eyebrow="Our Team"
-          title="Stellar, Team"
+          eyebrow="Fictional sample profiles"
+          title="A team layout concept"
           titleId="about-team-heading"
           size="xl"
           titleClassName="mt-[21px] tracking-snug"
         />
         <p className="max-w-148 text-base leading-relaxed tracking-snug text-secondary">
-          Uncover hidden patterns, track user behavior, and make data-driven decisions to propel your
-          business forward.
+          Sample profiles from the original design, shown to demonstrate the team-card layout.
+          These are not employees or collaborators of M.Unse.
         </p>
       </div>
 
@@ -48,18 +48,16 @@ const AboutTeam = () => (
             />
             <h3 className="max-w-[calc(100%-76px)] text-[22px] leading-tight font-medium tracking-snugger desktop:max-w-[calc(100%-92px)]">{name}</h3>
             <p className="mt-1.25 max-w-[calc(100%-76px)] text-md leading-5 text-secondary desktop:max-w-[calc(100%-92px)]">
-              {role}, <span className="text-accent">Flowbase</span>
+              {role} <span className="text-accent">· Demo profile</span>
             </p>
-            <ul className="mt-11.5 flex gap-2.5" aria-label={`${name} social media`}>
-              {socialLinks.map(({ name: network, href, icon }) => (
+            <ul className="mt-11.5 flex gap-2.5" aria-hidden="true">
+              {socialLinks.map(({ name: network, icon }) => (
                 <li key={network}>
-                  <a
-                    href={href}
-                    aria-label={network}
+                  <span
                     className="grid size-9.5 place-items-center rounded-[50%] border border-border bg-surface transition-[border-color] duration-fast ease-standard hover:border-violet-300"
                   >
                     <img src={icon} alt="" className="size-3.75 object-contain" />
-                  </a>
+                  </span>
                 </li>
               ))}
             </ul>

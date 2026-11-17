@@ -1,8 +1,8 @@
 export const featureSpotlight = {
   features: [
-    'Share the extra text you want to add as a feature.',
-    'Add your feature text here.',
-    "Add the text you'd like to include as a feature.",
+    'A clear overview of key business metrics.',
+    'Readable charts and focused dashboard layouts.',
+    "A consistent experience across screen sizes.",
   ],
   visualLabel:
     'Preview of Stellar dashboards: stock details for ASDX and TSA with price charts, and $16,248.50 in new customer revenue this month.',

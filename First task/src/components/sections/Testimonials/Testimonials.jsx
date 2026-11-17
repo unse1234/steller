@@ -5,6 +5,7 @@ import PerspectiveGrid from '../../ui/PerspectiveGrid/PerspectiveGrid.jsx'
 import SectionHeading from '../../ui/SectionHeading/SectionHeading.jsx'
 import { classNames } from '../../../utils/classNames.js'
 import TestimonialCard from './TestimonialCard.jsx'
+import { developer } from '../../../data/developer.js'
 
 const TITLE_ID = 'testimonials-title'
 
@@ -26,8 +27,9 @@ const Testimonials = ({ className }) => (
         titleClassName="max-w-[9.6em]"
         size="3xl"
         align="center"
-        eyebrow="Our Customers"
-        title="See what our customers are saying"
+        eyebrow="Fictional sample content"
+        title="Testimonial design examples"
+        description="These quotes and profiles demonstrate the layout. They are not real client reviews."
         titleId={TITLE_ID}
       />
 
@@ -47,11 +49,11 @@ const Testimonials = ({ className }) => (
         </ul>
         <Button
           className="absolute bottom-14.75 left-1/2 z-1 -translate-x-1/2 text-md font-regular"
-          href="#social"
+          href={developer.emailHref}
           variant="accent"
           size="lg"
         >
-          Follow us on Social Media
+          Discuss your website
         </Button>
       </div>
     </Container>
