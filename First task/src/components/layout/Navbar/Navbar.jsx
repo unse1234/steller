@@ -4,6 +4,7 @@ import Button from '../../ui/Button/Button.jsx'
 import Logo from '../../ui/Logo/Logo.jsx'
 import Container from '../Container/Container.jsx'
 import { usePathname } from '../../../utils/router.js'
+import PortfolioNotice from '../PortfolioNotice/PortfolioNotice.jsx'
 
 /*
  * Floating, fixed navigation bar. Below the desktop breakpoint the links and
@@ -121,6 +122,7 @@ const Navbar = () => {
             </div>
           </div>
         </nav>
+        <PortfolioNotice />
       </Container>
     </header>
   )

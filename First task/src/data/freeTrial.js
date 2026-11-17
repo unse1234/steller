@@ -1,3 +1,3 @@
 export const freeTrial = {
-  perks: ['Free 7-day trial', 'No credit card required'],
+  perks: ['One page, up to six sections', 'Your supplied design and content', 'Mobile layouts, deployment and one revision'],
 }

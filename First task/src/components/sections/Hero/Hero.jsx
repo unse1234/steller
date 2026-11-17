@@ -10,7 +10,7 @@ const HIGHLIGHT =
 
 const Hero = () => (
   <section
-    className="relative isolate overflow-x-clip pt-37.5 desktop:pt-52"
+    className="relative isolate overflow-x-clip pt-52 desktop:pt-64"
     aria-labelledby={TITLE_ID}
   >
     {/* Muted perspective-grid band behind the top of the hero; it ends partway down the device. */}
@@ -18,7 +18,7 @@ const Hero = () => (
 
     <Container>
       <div className="flex flex-col items-center text-center">
-        <p className="text-xs font-semibold text-accent">Our Framer Template</p>
+        <p className="text-xs font-semibold text-accent">Stellar · A SaaS website concept</p>
         <h1 id={TITLE_ID} className="mt-4 flex flex-col items-center leading-tight font-regular">
           <span className="text-display-lg font-bold tracking-tighter">Save time and build</span>{' '}
           <span className="flex flex-wrap items-center justify-center gap-x-[0.23em] text-display-md">

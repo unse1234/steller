@@ -1,5 +1,5 @@
 import { copyright, footerColumns, footerTagline, socialLinks } from '../../../data/footer.js'
-import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
+import { developer } from '../../../data/developer.js'
 import Logo from '../../ui/Logo/Logo.jsx'
 import Container from '../Container/Container.jsx'
 import { usePathname } from '../../../utils/router.js'
@@ -43,17 +43,17 @@ const Footer = () => {
         </div>
 
         <div className="mt-20 flex flex-wrap items-center justify-between gap-6 border-t border-t-border-subtle pt-12">
-          <p className="text-xs text-secondary">{copyright}</p>
-          <ul id="social" className="flex scroll-mt-32 gap-3">
-            {socialLinks.map(({ name, href, icon }) => (
+          <div className="grid gap-2 text-xs text-secondary"><p>{copyright}</p><p>Front-end implementation by <a href={developer.emailHref} className="text-accent underline-offset-4 hover:underline">{developer.name}</a>. Original design: Stellar by Flowbase.</p></div>
+          <ul id="social" className="flex scroll-mt-52 flex-wrap gap-3">
+            {socialLinks.map(({ name, href }) => (
               <li key={name}>
                 <a
-                  className="grid aspect-square w-10 place-items-center rounded-[50%] border border-border-subtle transition-[border-color] duration-fast ease-standard hover:border-violet-300"
+                  className="inline-flex min-h-10 items-center rounded-pill px-4 text-md no-underline border border-border-subtle transition-[border-color] duration-fast ease-standard hover:border-violet-300"
                   href={href}
                   aria-label={name}
                 >
                   {/* Glyph artwork is cropped to its bounds: 15px across, as in the design. */}
-                  <AssetSlot className="size-3.75 object-contain" src={icon} name="social-icon" />
+                  {name}
                 </a>
               </li>
             ))}

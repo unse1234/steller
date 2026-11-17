@@ -12,9 +12,10 @@ import Container from '../Container/Container.jsx'
  * copy. Wide screens scale the layout to the design's 1216px measure. The
  * copy column's width is `--split-content-width` (default 456px).
  */
-const SplitSection = ({ labelledBy, content, media, mediaFirst = false, className }) => (
+const SplitSection = ({ id, labelledBy, content, media, mediaFirst = false, className }) => (
   <section
-    className={classNames('overflow-x-clip py-section [--split-content-width:28.5rem]', className)}
+    id={id}
+    className={classNames('scroll-mt-52 overflow-x-clip py-section [--split-content-width:28.5rem]', className)}
     aria-labelledby={labelledBy}
   >
     <Container

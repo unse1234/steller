@@ -25,7 +25,7 @@ const AboutPage = () => (
     {/* The About design sets this band 3px tighter than the home page. */}
     <Testimonials className="desktop:pt-[calc(var(--spacing-section-lg)-1px)]" />
     <AboutFaq />
-    <div id="free-trial" className="scroll-mt-32"><FreeTrial /></div>
+    <div id="free-trial" className="scroll-mt-52"><FreeTrial /></div>
   </>
 )
 

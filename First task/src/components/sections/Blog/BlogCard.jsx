@@ -1,11 +1,8 @@
-import { assets } from '../../../assets/index.js'
 import AssetSlot from '../../ui/AssetSlot/AssetSlot.jsx'
-import Button from '../../ui/Button/Button.jsx'
-import ButtonIcon from '../../ui/Button/ButtonIcon.jsx'
 
 /** Article teaser: framed cover, tags, title, excerpt and a read-more link. */
-const BlogCard = ({ title, excerpt, href, tags, cover, coverLabel }) => (
-  <article className="flex h-full flex-col items-start">
+const BlogCard = ({ id, title, excerpt, paragraphs, tags, cover, coverLabel }) => (
+  <article id={'article-' + id} className="flex h-full scroll-mt-52 flex-col items-start">
     {/* Cover art inset in a hairline frame. */}
     <div className="self-stretch rounded-md border border-border-subtle bg-surface p-(--ring-width-sm)">
       <AssetSlot className="aspect-326/285 w-full rounded-sm object-cover" src={cover} alt={coverLabel} name="blog-cover" />
@@ -19,10 +16,10 @@ const BlogCard = ({ title, excerpt, href, tags, cover, coverLabel }) => (
     </ul>
     <h3 className="mt-3 text-[1.375rem] leading-7.25 font-regular tracking-snug">{title}</h3>
     <p className="mt-2.25 mb-auto text-md leading-comfortable tracking-snug text-secondary">{excerpt}</p>
-    <Button className="mt-6" href={href}>
-      Read More<span className="sr-only">: {title}</span>
-      <ButtonIcon src={assets.icons.arrowRight} name="arrow-icon" />
-    </Button>
+    <details className="group mt-6 w-full">
+      <summary className="w-fit cursor-pointer rounded-pill border border-border px-4 py-3 text-md transition-colors hover:border-violet-300 hover:text-accent">Read the notes<span className="sr-only">: {title}</span></summary>
+      <div className="mt-5 grid gap-3 text-md leading-comfortable text-secondary">{paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
+    </details>
   </article>
 )
 

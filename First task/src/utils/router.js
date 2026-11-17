@@ -7,7 +7,7 @@ import { useEffect, useSyncExternalStore } from 'react'
  * the browser's default behaviour.
  */
 
-const ROUTES = new Set(['/', '/about'])
+const ROUTES = new Set(['/', '/about', '/sign-in', '/sign-up'])
 const NAVIGATE_EVENT = 'app:navigate'
 
 export const normalizePath = (path) => path.replace(/\/$/, '') || '/'

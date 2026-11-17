@@ -17,26 +17,24 @@ const LAYOUTS = {
 }
 
 /**
- * Email capture form. Native validation (`type="email"`, `required`) runs
- * before `onSubscribe`; the note below the fields announces the result.
+ * Local-only demo form. Native validation (`type="email"`, `required`) runs
+ * before the local confirmation. No address is transmitted or stored.
  * `layout="inline"` sets the button beside the field from tablet width up.
  */
 const NewsletterForm = ({
   submitLabel,
   note,
   successMessage,
-  onSubscribe,
   layout = 'stacked',
   className,
 }) => {
   const inputId = useId()
+  const noteId = inputId + '-note'
   const [isSubscribed, setIsSubscribed] = useState(false)
   const styles = LAYOUTS[layout]
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    const email = new FormData(event.currentTarget).get('email')
-    onSubscribe?.(email)
     setIsSubscribed(true)
     event.currentTarget.reset()
   }
@@ -44,7 +42,7 @@ const NewsletterForm = ({
   return (
     <form className={classNames('grid gap-y-3.75', styles.form, className)} onSubmit={handleSubmit}>
       <label className="sr-only" htmlFor={inputId}>
-        Email address
+        Demo email address
       </label>
       <input
         id={inputId}
@@ -56,8 +54,9 @@ const NewsletterForm = ({
         )}
         type="email"
         name="email"
-        autoComplete="email"
-        placeholder="name@email.com"
+        autoComplete="off"
+        placeholder="demo@example.com"
+        aria-describedby={noteId}
         required
       />
       <Button
@@ -68,7 +67,7 @@ const NewsletterForm = ({
       >
         {submitLabel}
       </Button>
-      <div className={classNames('text-sm text-muted', styles.note)} aria-live="polite">
+      <div id={noteId} className={classNames('text-sm text-muted', styles.note)} aria-live="polite">
         {isSubscribed ? successMessage : note}
       </div>
     </form>
